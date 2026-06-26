@@ -32,9 +32,15 @@
   --po-card-2:        rgba(255,255,255,.06);
   --po-line:          rgba(255,255,255,.10);
 
-  /* Type */
+  /* Type — matched to live playsout.com
+     Body / UI / section headings: Red Hat Display (headings at weight 800).
+     Big hero lines + wordmark: NewBlackTypeface (the live site's display face).
+     NewBlackTypeface is a licensed/custom font: drop the real font files into the
+     @font-face block below and it takes over automatically. Until then it falls back
+     to Fredoka — the closest free rounded match. */
   --font: "Red Hat Display", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Fredoka", "Red Hat Display", system-ui, sans-serif;
+  --font-display: "NewBlackTypeface", "Fredoka", "Red Hat Display", system-ui, sans-serif;
+  --w-heading: 800;   /* section heading weight, matches live site */
 
   /* Layout */
   --maxw: 1240px;
@@ -44,6 +50,19 @@
 
   --ease: cubic-bezier(.22,.61,.36,1);
 }
+
+/* ---------- Real display font hook ----------
+   The live site's hero/wordmark font is "NewBlackTypeface". It's a custom/licensed
+   font, so it isn't bundled here. To make the hero match the live site exactly, add
+   the real font files to /assets and uncomment the block below — everything using
+   --font-display will switch to it automatically (otherwise it uses Fredoka).
+@font-face{
+  font-family:"NewBlackTypeface";
+  src:url("NewBlackTypeface.woff2") format("woff2"),
+      url("NewBlackTypeface.woff")  format("woff");
+  font-weight:400 700; font-display:swap;
+}
+*/
 
 /* ---------- Reset ---------- */
 *{box-sizing:border-box;margin:0;padding:0}
@@ -79,7 +98,7 @@ section{position:relative}
 .btn{
   display:inline-flex;align-items:center;gap:14px;
   padding:14px 16px 14px 26px;border-radius:var(--pill);
-  font-weight:700;font-size:.95rem;letter-spacing:.02em;
+  font-weight:700;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;
   transition:transform .25s var(--ease), background .25s, box-shadow .25s;
   white-space:nowrap;
 }
@@ -110,12 +129,15 @@ section{position:relative}
   background:rgba(10,10,28,.72);backdrop-filter:blur(16px);
   padding:14px 34px;border-bottom:1px solid var(--po-line);
 }
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.45rem;letter-spacing:-.01em}
+.brand{display:flex;align-items:center;gap:12px}
 .brand svg{width:34px;height:34px}
-.nav-links{display:flex;gap:34px;align-items:center}
+.brand-logo{height:34px;width:auto;display:block}
+.nav.scrolled .brand-logo{height:30px;transition:height .3s}
+.footer .brand-logo{height:32px}
+.nav-links{display:flex;gap:36px;align-items:center}
 .nav-links a{
-  font-size:.92rem;font-weight:600;letter-spacing:.06em;color:var(--po-text);
-  opacity:.82;transition:opacity .2s,color .2s;text-transform:uppercase;
+  font-size:.95rem;font-weight:500;letter-spacing:normal;color:var(--po-text);
+  opacity:.85;transition:opacity .2s,color .2s;text-transform:uppercase;
 }
 .nav-links a:hover,.nav-links a.active{opacity:1;color:#fff}
 .nav-links a.active{color:var(--po-indigo-soft)}
@@ -162,8 +184,8 @@ section{position:relative}
 .sec-head{max-width:720px;margin-bottom:54px}
 .sec-head.center{margin-left:auto;margin-right:auto}
 h2.title{
-  font-family:var(--font-display);font-weight:600;
-  font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.04;letter-spacing:-.02em;color:#fff;
+  font-family:var(--font);font-weight:var(--w-heading);
+  font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.04;letter-spacing:-.015em;color:#fff;
 }
 h2.title + p{margin-top:18px;font-size:1.1rem;color:var(--po-text-dim);max-width:62ch}
 .sec-head.center p{margin-left:auto;margin-right:auto}
@@ -234,7 +256,7 @@ h2.title + p{margin-top:18px;font-size:1.1rem;color:var(--po-text-dim);max-width
 .split{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .panel{padding:42px;border-radius:var(--radius-lg);border:1px solid var(--po-line);position:relative;overflow:hidden}
 .panel .eyebrow{margin-bottom:14px}
-.panel h3{font-family:var(--font-display);font-weight:600;font-size:1.9rem;line-height:1.1;margin-bottom:12px}
+.panel h3{font-family:var(--font);font-weight:var(--w-heading);font-size:1.9rem;line-height:1.1;letter-spacing:-.01em;margin-bottom:12px}
 .panel ul{list-style:none;margin:22px 0 28px}
 .panel li{padding:11px 0;border-top:1px solid var(--po-line);display:flex;gap:12px;align-items:center;color:var(--po-text-dim)}
 .panel li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--po-indigo-soft);flex:none}
@@ -243,7 +265,7 @@ h2.title + p{margin-top:18px;font-size:1.1rem;color:var(--po-text-dim);max-width
 
 /* ---------- Stats ---------- */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
-.stat .num{font-family:var(--font-display);font-weight:600;font-size:clamp(2.2rem,4vw,3.2rem);
+.stat .num{font-family:var(--font);font-weight:var(--w-heading);font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:-.01em;
   background:linear-gradient(120deg,#fff,var(--po-indigo-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
 .stat .lbl{color:var(--po-text-dim);font-size:.92rem;margin-top:4px}
 
@@ -267,7 +289,7 @@ h2.title + p{margin-top:18px;font-size:1.1rem;color:var(--po-text-dim);max-width
   background:radial-gradient(120% 140% at 50% 0%, var(--po-indigo) 0%, #221bb0 45%, #11112a 100%);
   border:1px solid rgba(91,91,255,.4);
 }
-.cta-band h2{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.05;color:#fff}
+.cta-band h2{font-family:var(--font);font-weight:var(--w-heading);font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.05;letter-spacing:-.015em;color:#fff}
 .cta-band p{margin:18px auto 32px;max-width:54ch;color:#d6d6f5;font-size:1.08rem}
 .cta-band .hero-cta{margin-top:0}
 
@@ -311,7 +333,7 @@ h2.title + p{margin-top:18px;font-size:1.1rem;color:var(--po-text-dim);max-width
 /* ---------- Steps (How it works) ---------- */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}
 .step{padding:32px;border-radius:var(--radius);background:var(--po-card);border:1px solid var(--po-line);position:relative}
-.step::before{counter-increment:step;content:"0" counter(step);font-family:var(--font-display);font-weight:600;
+.step::before{counter-increment:step;content:"0" counter(step);font-family:var(--font);font-weight:var(--w-heading);
   font-size:2.4rem;color:var(--po-indigo-soft);opacity:.55;display:block;margin-bottom:10px}
 .step h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
 .step p{color:var(--po-text-dim);font-size:.96rem}
