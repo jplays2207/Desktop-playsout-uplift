@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PlaysOut Hub — play games, watch dramas, earn rewards</title>
+<meta name="description" content="The PlaysOut Hub: browse 1,000+ instant games, binge short dramas and join live rounds — all in one place, no downloads, rewards as you go." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800;900&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="index.html">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="20" cy="20" r="11" fill="#fff"/><circle cx="16" cy="18" r="2.6" fill="#3838FF"/>
+      <circle cx="24" cy="22" r="2.6" fill="#3838FF"/>
+      <ellipse cx="20" cy="20" rx="18" ry="6.4" stroke="#fff" stroke-width="2.2" transform="rotate(-26 20 20)"/>
+    </svg>playsout
+  </a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="hub.html" class="active">Hub</a>
+    <a href="drama.html">Drama &amp; Live</a>
+    <a href="dev-arena.html">Dev Arena</a>
+    <a href="index.html#news">News</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="hub.html" class="btn btn--dark btn--sm">Play now <span class="arrow">&rarr;</span></a>
+    <a href="dev-arena.html" class="btn btn--light btn--sm">Start building <span class="arrow">&rarr;</span></a>
+  </div>
+  <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero" style="padding-bottom:50px">
+  <div class="wrap">
+    <p class="eyebrow reveal">The Hub</p>
+    <h1 class="reveal d1">Everything to play,<br>all in one place.</h1>
+    <p class="reveal d2">Games, dramas and live rounds — no downloads, no waiting. Pick something, get hooked, earn as you go.</p>
+    <div class="hub-bar reveal d3" style="margin-top:36px">
+      <div class="search">
+        <span aria-hidden="true">🔍</span>
+        <input type="text" placeholder="Search games, dramas, creators…" aria-label="Search" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER + GRID -->
+<section class="section section--navy" style="padding-top:30px">
+  <div class="wrap">
+    <div class="chips">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="game">Mini-games</button>
+      <button class="chip" data-filter="drama">Short drama</button>
+      <button class="chip" data-filter="live">Live</button>
+      <button class="chip" data-filter="puzzle">Puzzle</button>
+      <button class="chip" data-filter="action">Action</button>
+      <button class="chip" data-filter="arcade">Arcade</button>
+    </div>
+
+    <div class="card-grid cols-4">
+      <!-- games -->
+      <div class="tile reveal" data-cat="game puzzle"><div class="tile-art" style="background:linear-gradient(150deg,#ff7ab0,#7b3fe4)"><span class="badge">Puzzle</span>💅</div><div class="tile-body"><h4>Crazy Nail Pull</h4><span>Puzzle · Adventure</span></div></div>
+      <div class="tile reveal" data-cat="game arcade"><div class="tile-art" style="background:linear-gradient(150deg,#ffb347,#ff5e62)"><span class="badge">Arcade</span>🐱</div><div class="tile-body"><h4>KittyCrush Saga</h4><span>Arcade · Puzzle</span></div></div>
+      <div class="tile reveal" data-cat="game arcade"><div class="tile-art" style="background:linear-gradient(150deg,#43cea2,#185a9d)"><span class="badge">Arcade</span>📦</div><div class="tile-body"><h4>StockClerk</h4><span>Arcade · Puzzle</span></div></div>
+      <div class="tile reveal" data-cat="game puzzle"><div class="tile-art" style="background:linear-gradient(150deg,#f7971e,#ffd200)"><span class="badge">Puzzle</span>🐶</div><div class="tile-body"><h4>Shiba Detective</h4><span>Puzzle</span></div></div>
+      <div class="tile reveal" data-cat="game action"><div class="tile-art" style="background:linear-gradient(150deg,#11998e,#38ef7d)"><span class="badge">Action</span>🧟</div><div class="tile-body"><h4>Veggies VS Zombies</h4><span>Adventure · FPS</span></div></div>
+      <div class="tile reveal" data-cat="game puzzle"><div class="tile-art" style="background:linear-gradient(150deg,#ee9ca7,#ffdde1)"><span class="badge">Puzzle</span>🐈</div><div class="tile-body"><h4>Kitty Escape</h4><span>Puzzle</span></div></div>
+      <div class="tile reveal" data-cat="game puzzle"><div class="tile-art" style="background:linear-gradient(150deg,#4e54c8,#8f94fb)"><span class="badge">RPG</span>🔩</div><div class="tile-body"><h4>Remove Screws 3D</h4><span>Puzzle · RPG</span></div></div>
+      <div class="tile reveal" data-cat="game action arcade"><div class="tile-art" style="background:linear-gradient(150deg,#f12711,#f5af19)"><span class="badge">Arcade</span>🐾</div><div class="tile-body"><h4>Fun Cat Go</h4><span>Action · Arcade</span></div></div>
+      <!-- dramas -->
+      <div class="tile reveal" data-cat="drama"><div class="tile-art" style="background:linear-gradient(150deg,#ff5e8a,#7b2ff7)"><span class="badge" style="background:var(--po-pink)">Drama</span>🎬</div><div class="tile-body"><h4>The CEO&rsquo;s Secret Wife</h4><span>Romance · 24 ep</span></div></div>
+      <div class="tile reveal" data-cat="drama"><div class="tile-art" style="background:linear-gradient(150deg,#232526,#ff512f)"><span class="badge" style="background:var(--po-pink)">Drama</span>🔥</div><div class="tile-body"><h4>Back From the Ashes</h4><span>Revenge · 30 ep</span></div></div>
+      <div class="tile reveal" data-cat="drama"><div class="tile-art" style="background:linear-gradient(150deg,#0f2027,#2c5364)"><span class="badge" style="background:var(--po-pink)">Drama</span>🕵️</div><div class="tile-body"><h4>Apartment 9</h4><span>Mystery · 18 ep</span></div></div>
+      <div class="tile reveal" data-cat="drama"><div class="tile-art" style="background:linear-gradient(150deg,#f7971e,#ff5e8a)"><span class="badge" style="background:var(--po-pink)">Drama</span>👽</div><div class="tile-body"><h4>My Roommate Is an Alien</h4><span>Comedy · 16 ep</span></div></div>
+      <!-- live -->
+      <div class="tile reveal" data-cat="live game"><div class="tile-art" style="background:linear-gradient(150deg,#3838ff,#00c6ff)"><span class="badge" style="background:var(--po-lime);color:#0a0a1c">● Live</span>⚡</div><div class="tile-body"><h4>Tap Race Royale</h4><span>Bullet-chat · 12.4k</span></div></div>
+      <div class="tile reveal" data-cat="live game"><div class="tile-art" style="background:linear-gradient(150deg,#11998e,#38ef7d)"><span class="badge" style="background:var(--po-lime);color:#0a0a1c">● Live</span>🧠</div><div class="tile-body"><h4>Brain Blitz Live</h4><span>Trivia · 8.1k</span></div></div>
+      <div class="tile reveal" data-cat="live game"><div class="tile-art" style="background:linear-gradient(150deg,#fc466b,#3f5efb)"><span class="badge" style="background:var(--po-lime);color:#0a0a1c">● Live</span>🎯</div><div class="tile-body"><h4>Drop or Win</h4><span>Predict · 5.7k</span></div></div>
+      <div class="tile reveal" data-cat="live game"><div class="tile-art" style="background:linear-gradient(150deg,#f7971e,#ffd200)"><span class="badge" style="background:var(--po-lime);color:#0a0a1c">● Live</span>🏆</div><div class="tile-body"><h4>Last Tap Standing</h4><span>Arena · 20.2k</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REWARDS STRIP -->
+<section class="section section--deep">
+  <div class="wrap">
+    <div class="cta-band reveal" style="background:radial-gradient(120% 140% at 50% 0%, #ffc24b 0%, #ff7a18 40%, #11112a 100%);border-color:rgba(255,194,75,.4)">
+      <p class="eyebrow" style="color:#1a1a1a">Rewards</p>
+      <h2 style="color:#0a0a1c">Every tap can earn.</h2>
+      <p style="color:#241a05">Play games, finish episodes and join live rounds to collect rewards across the PlaysOut ecosystem — fun first, perks included.</p>
+      <div class="hero-cta">
+        <a href="#" class="btn btn--dark">See how rewards work <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="20" cy="20" r="11" fill="#fff"/><circle cx="16" cy="18" r="2.6" fill="#3838FF"/>
+            <circle cx="24" cy="22" r="2.6" fill="#3838FF"/>
+            <ellipse cx="20" cy="20" rx="18" ry="6.4" stroke="#fff" stroke-width="2.2" transform="rotate(-26 20 20)"/>
+          </svg>playsout
+        </a>
+        <p>Bite-sized entertainment, everywhere you already are. Quick games, live play and short dramas — with rewards built in.</p>
+        <form class="subscribe" onsubmit="return false">
+          <input type="email" placeholder="Email address" aria-label="Email address" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div><h5>Explore</h5><ul>
+        <li><a href="hub.html">Hub</a></li><li><a href="drama.html">Drama &amp; Live</a></li>
+        <li><a href="dev-arena.html">Dev Arena</a></li><li><a href="index.html#news">News</a></li>
+      </ul></div>
+      <div><h5>Build</h5><ul>
+        <li><a href="dev-arena.html">Start building</a></li><li><a href="#">WebView SDK</a></li>
+        <li><a href="#">How to</a></li><li><a href="#">Documentation</a></li>
+      </ul></div>
+      <div><h5>Company</h5><ul>
+        <li><a href="#">Investors</a></li><li><a href="#">Traffic partners</a></li>
+        <li><a href="#">Ecosystem &amp; rewards</a></li><li><a href="mailto:contact@playsout.com">Get in touch</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 PlaysOut. All rights reserved.</span>
+      <div class="socials">
+        <a href="https://x.com/itplaysout" aria-label="X">𝕏</a>
+        <a href="https://t.me/PlaysOut" aria-label="Telegram">✈</a>
+        <a href="https://www.linkedin.com/company/playsout/" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/playsout" aria-label="GitHub">⌥</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
