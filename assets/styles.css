@@ -72,7 +72,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:#fff;line-height:1.02}
 
 .display{font-family:var(--display)}
-.title{font-family:var(--display);font-weight:800;font-size:clamp(2.3rem,5vw,4.1rem);line-height:1.03;color:#fff}
+.title{font-family:var(--display);font-weight:800;font-size:clamp(2rem,3.6vw,3.1rem);line-height:1.06;color:#fff}
 .eyebrow{font-family:var(--font);font-weight:500;font-size:clamp(1.05rem,1.8vw,1.45rem);color:var(--text-dim)}
 .lead{color:var(--text-dim);font-size:clamp(1rem,1.4vw,1.18rem);max-width:62ch}
 .grad-accent{color:#fff}
