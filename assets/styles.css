@@ -92,11 +92,11 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 
 /* ---------------- Nav ---------------- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;
-  padding:22px 40px;transition:background .3s,padding .3s,backdrop-filter .3s}
-.nav.scrolled{background:rgba(12,12,28,.78);backdrop-filter:blur(16px);padding:14px 40px;border-bottom:1px solid var(--line)}
+  padding:40px 56px;transition:background .3s,padding .3s,backdrop-filter .3s}
+.nav.scrolled{background:rgba(12,12,28,.78);backdrop-filter:blur(16px);padding:18px 56px;border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center}
-.brand-logo{height:34px;width:auto;display:block}
-.nav.scrolled .brand-logo{height:30px;transition:height .3s}
+.brand-logo{height:38px;width:auto;display:block}
+.nav.scrolled .brand-logo{height:32px;transition:height .3s}
 .nav-links{display:flex;gap:38px;align-items:center}
 .nav-links a{font-weight:500;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;color:#fff;opacity:.82;transition:opacity .2s}
 .nav-links a:hover,.nav-links a.active{opacity:1}

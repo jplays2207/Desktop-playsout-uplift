@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>PlaysOut — Investor Access</title>
+<link rel="stylesheet" href="assets/styles.css?v=6" />
+<style>
+  /* Placeholder gate styling (page-specific) */
+  .gate-wrap{min-height:100vh;display:grid;place-items:center;padding:40px 24px;position:relative;overflow:hidden;
+    background:radial-gradient(110% 80% at 50% -10%, var(--blue) 0%, var(--blue-deep) 36%, var(--navy) 80%)}
+  .gate-logo{position:absolute;top:40px;left:56px}
+  .gate-logo img{height:38px}
+  .gate{width:100%;max-width:440px;background:var(--slate);border-radius:var(--r-lg);padding:44px 40px;text-align:center}
+  .gate .lock{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;
+    background:rgba(255,255,255,.08);font-size:1.5rem}
+  .gate h1{font-family:var(--display);font-weight:800;font-size:1.9rem;color:#fff;margin-bottom:8px}
+  .gate p{color:var(--text-dim);font-size:.98rem;margin-bottom:26px}
+  .gate input{width:100%;padding:15px 20px;border-radius:var(--pill);background:rgba(255,255,255,.06);
+    border:1px solid var(--line);color:#fff;font-family:inherit;font-size:1rem;outline:none;text-align:center;letter-spacing:.04em}
+  .gate input:focus{border-color:var(--periwinkle)}
+  .gate .btn{margin-top:16px;width:100%;justify-content:center}
+  .gate .err{color:#ff8a8a;font-size:.88rem;margin-top:14px;min-height:1.1em;opacity:0;transition:opacity .2s}
+  .gate .err.show{opacity:1}
+  .gate .hint{margin-top:22px;font-size:.8rem;color:var(--text-mute)}
+  .gate .hint a{color:var(--periwinkle)}
+  #area{display:none;min-height:100vh;place-items:center;text-align:center;padding:120px 24px}
+  #area.show{display:grid}
+  #area h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,4vw,3.4rem);color:#fff;max-width:18ch}
+  #area p{color:var(--text-dim);margin-top:18px;max-width:52ch}
+</style>
+</head>
+<body>
+
+<!-- ===== LOCK SCREEN (placeholder client-side gate) ===== -->
+<section class="gate-wrap" id="lock">
+  <a class="gate-logo" href="index.html"><img src="assets/playsout-logo.png" alt="PlaysOut" /></a>
+  <form class="gate" id="gateForm" autocomplete="off">
+    <div class="lock" aria-hidden="true">🔒</div>
+    <h1>Investor access</h1>
+    <p>This area is private. Enter the access code to continue.</p>
+    <input type="password" id="pw" placeholder="Access code" aria-label="Access code" autofocus />
+    <button type="submit" class="btn btn--blue">Enter <span class="arrow">&rarr;</span></button>
+    <div class="err" id="err">Incorrect code — try again.</div>
+    <p class="hint">Need access? <a href="mailto:contact@playsout.com?subject=Investor%20access">Request it here</a></p>
+  </form>
+</section>
+
+<!-- ===== UNLOCKED AREA (placeholder — real content added later) ===== -->
+<section id="area">
+  <div>
+    <h1>Welcome to the PlaysOut investor area.</h1>
+    <p>This is where the deck, metrics and data room will live. We&rsquo;re building it out now — check back shortly.</p>
+    <div class="hero-cta" style="justify-content:center;margin-top:30px">
+      <a href="mailto:contact@playsout.com?subject=Investor%20enquiry" class="btn btn--blue">Get in touch <span class="arrow">&rarr;</span></a>
+      <a href="index.html" class="btn btn--dark">Back to site <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<script>
+/* ----------------------------------------------------------------------
+   PLACEHOLDER GATE — not real security.
+   Anyone can read this code and see the access code, so this only keeps
+   casual visitors out. For genuine investor-only protection, turn on
+   Vercel's "Password Protection" for this project (Settings → Deployment
+   Protection) or add real server-side auth. Change the code below as needed.
+---------------------------------------------------------------------- */
+(function () {
+  var ACCESS_CODE = "playsout2026";
+  var lock = document.getElementById("lock");
+  var area = document.getElementById("area");
+  var form = document.getElementById("gateForm");
+  var err  = document.getElementById("err");
+
+  function unlock() {
+    lock.style.display = "none";
+    area.classList.add("show");
+    try { sessionStorage.setItem("po_inv", "1"); } catch (e) {}
+  }
+  if (sessionStorage.getItem("po_inv") === "1") unlock();
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var val = document.getElementById("pw").value.trim();
+    if (val === ACCESS_CODE) { err.classList.remove("show"); unlock(); }
+    else { err.classList.add("show"); }
+  });
+})();
+</script>
+</body>
+</html>
