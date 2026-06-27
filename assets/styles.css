@@ -66,7 +66,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 /* ---------------- Layout ---------------- */
 .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 40px}
-.section{padding:clamp(44px,6vw,88px) 0}
+.section{padding:44px 0}
 .center{text-align:center}
 
 h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:#fff;line-height:1.02}
