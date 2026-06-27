@@ -61,3 +61,14 @@
     a.addEventListener("click", function (e) { e.preventDefault(); });
   });
 })();
+
+
+/* News rail arrows */
+(function(){
+  var rail=document.getElementById("newsRail");
+  if(!rail) return;
+  function step(){ return Math.max(rail.clientWidth*0.8, 360); }
+  var n=document.getElementById("newsNext"), p=document.getElementById("newsPrev");
+  if(n) n.addEventListener("click",function(){ rail.scrollBy({left:step(),behavior:"smooth"}); });
+  if(p) p.addEventListener("click",function(){ rail.scrollBy({left:-step(),behavior:"smooth"}); });
+})();

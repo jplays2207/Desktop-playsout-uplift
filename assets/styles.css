@@ -212,6 +212,16 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 .ncard-outlet{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:0 18px;
   font-family:var(--display);font-weight:800;font-size:1.45rem;color:#fff;opacity:.96;letter-spacing:.01em}
 .ncard .read{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:700;font-size:.86rem;color:var(--periwinkle)}
+/* News rail (horizontal carousel w/ arrows) */
+.news-rail{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  padding:2px 2px 8px;-ms-overflow-style:none;scrollbar-width:none}
+.news-rail::-webkit-scrollbar{display:none}
+.news-rail .ncard{flex:0 0 350px;scroll-snap-align:start}
+.rail-nav{display:flex;align-items:center;gap:10px}
+.rail-btn{width:44px;height:44px;flex:none;border-radius:50%;border:1px solid var(--line);background:var(--slate-2);
+  color:#fff;font-size:1.3rem;line-height:1;display:grid;place-items:center;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.rail-btn:hover{background:var(--slate);border-color:var(--periwinkle);transform:translateY(-2px)}
+@media(max-width:560px){.news-rail .ncard{flex:0 0 82%}}
 
 /* ---------------- Statement + periwinkle panels ---------------- */
 .statement{text-align:center;max-width:18ch;margin:0 auto}
