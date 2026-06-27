@@ -186,6 +186,18 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 .fcard--accent .mini{color:#eaeaff;font-size:.92rem;font-weight:500}
 .fcard .mini{color:var(--text-dim)}
 
+/* Tall, centered feature tiles with hover-reveal (home "Unlocking…" section) */
+.feature-row.tiles{gap:18px}
+.feature-row.tiles .fcard{min-height:286px;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:30px 22px;cursor:default;border-color:var(--line)}
+.feature-row.tiles .fcard:hover{transform:translateY(-5px);background:var(--slate);border-color:rgba(73,92,245,.55)}
+.feature-row.tiles .f-title{font-family:var(--font);font-weight:600;font-size:1.12rem;color:#fff;line-height:1.32;
+  transition:transform .3s var(--ease)}
+.feature-row.tiles .fcard:hover .f-title{transform:translateY(-6px)}
+.feature-row.tiles .f-desc{font-family:var(--font);color:var(--text-dim);font-size:.92rem;line-height:1.45;max-width:22ch;
+  opacity:0;max-height:0;overflow:hidden;transition:opacity .3s var(--ease),max-height .35s var(--ease),margin-top .3s}
+.feature-row.tiles .fcard:hover .f-desc{opacity:1;max-height:160px;margin-top:12px}
+
 /* ---------------- News ---------------- */
 .news-head{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:38px}
 .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
