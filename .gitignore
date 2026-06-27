@@ -5,3 +5,8 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# original (unoptimized) source game art — keep only the *.jpg optimized versions
+assets/games/*copy.*
+assets/games/.DS_Store
+assets/games/_DROP_IMAGES_HERE.txt
