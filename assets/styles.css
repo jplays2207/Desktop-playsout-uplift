@@ -105,6 +105,35 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 .nav-burger{display:none;flex-direction:column;gap:5px;padding:8px}
 .nav-burger span{width:24px;height:2px;background:#fff;border-radius:2px}
 
+/* ---- Hub dropdown ---- */
+.nav-drop{position:relative;display:inline-flex;align-items:center}
+.nav-drop-trigger{display:inline-flex;align-items:center;gap:7px;cursor:pointer}
+.nav-drop .caret{font-size:.65em;transition:transform .25s var(--ease);opacity:.8}
+.nav-drop:hover .caret{transform:rotate(180deg)}
+.nav-drop-menu{position:absolute;top:100%;left:50%;min-width:320px;margin-top:18px;padding:14px;
+  background:var(--navy-2);border:1px solid var(--line);border-radius:22px;box-shadow:0 26px 60px rgba(0,0,0,.55);
+  display:flex;flex-direction:column;z-index:120;
+  opacity:0;visibility:hidden;transform:translate(-50%,8px);transition:opacity .22s var(--ease),transform .22s var(--ease)}
+.nav-drop:hover .nav-drop-menu,.nav-drop:focus-within .nav-drop-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.nav-drop-menu::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px} /* hover bridge */
+.nav-drop-menu a{display:flex;align-items:center;justify-content:space-between;gap:28px;
+  padding:16px 20px;border-radius:14px;text-transform:none;letter-spacing:normal;
+  font-size:1.05rem;font-weight:600;color:#fff;opacity:1;transition:background .2s}
+.nav-drop-menu a:hover{background:rgba(255,255,255,.07)}
+.nav-drop-menu a + a{border-top:1px solid var(--line);border-radius:0}
+.nav-drop-menu .drop-arrow{width:36px;height:36px;flex:none;border-radius:50%;background:#fff;color:var(--ink);
+  display:grid;place-items:center;font-size:1rem}
+
+@media(max-width:900px){
+  .nav-drop{flex-direction:column;align-items:flex-start;width:100%}
+  .nav-drop .caret{display:none}
+  .nav-drop-menu{position:static;opacity:1;visibility:visible;transform:none;margin:8px 0 0;min-width:0;width:100%;
+    background:none;border:none;box-shadow:none;padding:0 0 0 14px}
+  .nav-drop-menu a{padding:10px 0;font-size:1rem}
+  .nav-drop-menu a + a{border-top:none}
+  .nav-drop-menu .drop-arrow{display:none}
+}
+
 /* ---------------- Hero ---------------- */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
   padding:150px 24px 80px;position:relative;overflow:hidden;

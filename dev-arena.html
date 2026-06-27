@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>PlaysOut Dev Arena — build entertainment, get distributed everywhere</title>
 <meta name="description" content="Build games, live experiences and short dramas with PlaysOut. Ship once, reach audiences across every app in the network — tools, data, payments and rewards handled for you." />
-<link rel="stylesheet" href="assets/styles.css?v=6" />
+<link rel="stylesheet" href="assets/styles.css?v=7" />
 </head>
 <body>
 
@@ -13,8 +13,13 @@
   <a class="brand" href="index.html"><img class="brand-logo" src="assets/playsout-logo.png" alt="PlaysOut" /></a>
   <nav class="nav-links">
     <a href="index.html">Home</a>
-    <a href="hub.html">Hub</a>
-    <a href="drama.html">Drama &amp; Live</a>
+    <div class="nav-drop">
+      <a href="hub.html" class="nav-drop-trigger">Hub <span class="caret" aria-hidden="true">&#9662;</span></a>
+      <div class="nav-drop-menu">
+        <a href="hub.html"><span>Hub</span><span class="drop-arrow">&rarr;</span></a>
+        <a href="drama.html"><span>Drama &amp; Live</span><span class="drop-arrow">&rarr;</span></a>
+      </div>
+    </div>
     <a href="index.html#news">News</a>
     <a href="investors.html">Investors</a>
   </nav>

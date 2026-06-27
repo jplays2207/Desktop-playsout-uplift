@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>PlaysOut Hub — play games, watch dramas, earn rewards</title>
 <meta name="description" content="The PlaysOut Hub: browse 1,000+ instant games, binge short dramas and join live rounds — all in one place, no downloads, rewards as you go." />
-<link rel="stylesheet" href="assets/styles.css?v=6" />
+<link rel="stylesheet" href="assets/styles.css?v=7" />
 </head>
 <body>
 
@@ -13,8 +13,13 @@
   <a class="brand" href="index.html"><img class="brand-logo" src="assets/playsout-logo.png" alt="PlaysOut" /></a>
   <nav class="nav-links">
     <a href="index.html">Home</a>
-    <a href="hub.html" class="active">Hub</a>
-    <a href="drama.html">Drama &amp; Live</a>
+    <div class="nav-drop">
+      <a href="hub.html" class="nav-drop-trigger active">Hub <span class="caret" aria-hidden="true">&#9662;</span></a>
+      <div class="nav-drop-menu">
+        <a href="hub.html"><span>Hub</span><span class="drop-arrow">&rarr;</span></a>
+        <a href="drama.html"><span>Drama &amp; Live</span><span class="drop-arrow">&rarr;</span></a>
+      </div>
+    </div>
     <a href="index.html#news">News</a>
     <a href="investors.html">Investors</a>
   </nav>
