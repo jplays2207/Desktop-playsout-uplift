@@ -288,6 +288,18 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 .reel-cap{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:30px 14px 13px;font-weight:700;font-size:.9rem;
   color:#fff;line-height:1.2;background:linear-gradient(to top,rgba(0,0,0,.72),transparent)}
 @media(max-width:860px){.reels{grid-template-columns:repeat(2,1fr);gap:14px}}
+/* IP-featured game cards */
+.ip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+.ipcard{border-radius:22px;overflow:hidden;background:linear-gradient(170deg,rgba(255,255,255,.05),rgba(255,255,255,.012));
+  border:1px solid rgba(255,255,255,.09);transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
+.ipcard:hover{transform:translateY(-6px);border-color:rgba(255,194,75,.55);box-shadow:0 24px 56px -26px rgba(0,0,0,.72)}
+.ipcard-img{aspect-ratio:16/10;background:var(--slate-2);position:relative;overflow:hidden}
+.ipcard-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ipcard-img--logo img{object-fit:contain;padding:30px}
+.ipcard-body{padding:24px 24px 28px}
+.ipcard-body h3{font-family:var(--display);font-weight:800;font-size:1.4rem;color:#fff;margin-bottom:8px}
+.ipcard-body p{color:var(--text-dim);font-size:.96rem;line-height:1.5}
+@media(max-width:860px){.ip-grid{grid-template-columns:1fr}}
 /* Statement headline glow-up */
 .statement-wrap{position:relative;max-width:1000px;margin:0 auto;text-align:center;z-index:0}
 .statement-wrap::before{content:"";position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);

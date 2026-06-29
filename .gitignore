@@ -33,3 +33,10 @@ assets/video/Brain Blitz Live.mp4
 assets/video/Drop or Win.mp4
 assets/video/Last Tap Standing.mp4
 assets/video/Tap Race Royale.mp4
+
+# IP card source/debug files (renamed optimized versions are what the site uses)
+assets/ip/_chk/
+assets/ip/.DS_Store
+assets/ip/eros now.png
+assets/ip/doge dungeon.jpg
+assets/ip/fifa rivals.png

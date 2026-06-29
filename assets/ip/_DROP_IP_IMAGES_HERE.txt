@@ -1,0 +1,16 @@
+DROP IP CARD IMAGES HERE
+========================
+Put the IP-featured card images in THIS folder (assets/ip/).
+
+NEEDED (exact filenames):
+  eros-now.png     -> Eros Now logo  (logo shows centered on a branded background)
+  doge-dungeon.png -> Doge Dungeon key art / cover
+
+(FIFA already uses assets/games/fifa-rivals.jpg — nothing to drop for that one.)
+
+FORMAT:
+  - PNG (transparent fine for the Eros logo) or JPG for key art.
+  - Eros = logo (centered). Doge = cover art (fills the tile).
+  - Any size; drop any names and tell me and I'll rename + wire them.
+
+Until added, the card shows a clean coloured panel (no broken image).
