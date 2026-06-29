@@ -1,0 +1,10 @@
+DROP NEW MINI-GAME ICONS HERE
+=============================
+Put your new mini-game icon/cover images in THIS folder (assets/games/_new/).
+
+- Any filename is fine — I'll identify each game, optimize it, rename it cleanly,
+  and add it to the Mini-games row on the Originals page (and the homepage carousel
+  if you want).
+- Best as square-ish cover art (icons or key art). PNG or JPG, any size.
+
+When they're in, just say "they're in" and I'll wire them up.
