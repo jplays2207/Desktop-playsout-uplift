@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PlaysOut Hub — play games, watch dramas, earn rewards</title>
-<meta name="description" content="The PlaysOut Hub: browse 1,000+ instant games, binge short dramas and join live rounds — all in one place, no downloads, rewards as you go." />
-<link rel="stylesheet" href="assets/styles.css?v=29" />
+<title>PlaysOut Hub — community, competitions &amp; events</title>
+<meta name="description" content="The PlaysOut Hub: tournaments, challenges, community events, featured titles and upcoming partnerships. Jump in, climb the leaderboards and win as you play." />
+<link rel="stylesheet" href="assets/styles.css?v=30" />
 </head>
 <body>
 
@@ -24,67 +24,87 @@
   </nav>
   <div class="nav-cta">
     <a href="play.html" class="btn btn--dark btn--sm">Play now <span class="arrow">&rarr;</span></a>
-    <a href="dev-arena.html" class="btn btn--dark btn--sm">Start building <span class="arrow">&rarr;</span></a>
+    <a href="https://github.com/Playsout" target="_blank" rel="noopener" class="btn btn--dark btn--sm">Get the SDK <span class="arrow">&rarr;</span></a>
   </div>
   <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </header>
 
-<section class="page-hero" style="padding-bottom:54px">
+<section class="page-hero">
   <div class="wrap">
     <p class="eyebrow reveal" style="margin-bottom:8px">The Hub</p>
-    <h1 class="reveal d1">Everything to play,<br>all in one place.</h1>
-    <p class="reveal d2">Games, dramas and live rounds — no downloads, no waiting. Pick something, get hooked, earn as you go.</p>
-  </div>
+    <h1 class="reveal d1">Where the<br>community plays.</h1>
+    <p class="reveal d2">Tournaments, challenges, events and exclusive drops &mdash; the home of the PlaysOut community. Jump in, climb the leaderboards and win as you play.</p>
+    <div class="hero-cta reveal d3">
+      <a href="https://t.me/PlaysOut" target="_blank" rel="noopener" class="btn btn--blue">Join on Telegram <span class="arrow">&rarr;</span></a>
+      <a href="#community" class="btn btn--dark">All channels <span class="arrow">&rarr;</span></a>
+    </div>
   </div>
 </section>
 
+<!-- HAPPENING NOW -->
+<section class="section" id="events">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="eyebrow" style="margin-bottom:10px">Happening now</p><h2 class="title">Compete, climb, win.</h2></div>
+    <div class="events">
+      <div class="ev-card reveal d1">
+        <span class="ev-badge live"><span class="pulse"></span>Live</span>
+        <h3>Weekly Tap Champions</h3>
+        <div class="ev-meta"><span>Prize <b>10,000 pts</b></span><span>Ends <b>Sunday</b></span></div>
+        <a href="https://t.me/PlaysOut" target="_blank" rel="noopener" class="btn btn--blue btn--sm">Join now <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="ev-card reveal d2">
+        <span class="ev-badge live"><span class="pulse"></span>Live</span>
+        <h3>Drama Binge Challenge</h3>
+        <div class="ev-meta"><span>Reward <b>Exclusive badge</b></span><span>Ends <b>Friday</b></span></div>
+        <a href="https://t.me/PlaysOut" target="_blank" rel="noopener" class="btn btn--blue btn--sm">Join now <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="ev-card reveal d3">
+        <span class="ev-badge soon">Upcoming</span>
+        <h3>DogeOS Mini-Game Cup</h3>
+        <div class="ev-meta"><span>Prize <b>$DOGE pool</b></span><span>Starts <b>Soon</b></span></div>
+        <a href="https://t.me/PlaysOut" target="_blank" rel="noopener" class="btn btn--dark btn--sm">Notify me <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED THIS WEEK -->
 <section class="section">
   <div class="wrap">
-    <div class="chips">
-      <button class="chip active" data-filter="all">All</button>
-      <button class="chip" data-filter="game">Mini-games</button>
-      <button class="chip" data-filter="drama">Short drama</button>
-      <button class="chip" data-filter="live">Live</button>
-      <button class="chip" data-filter="puzzle">Puzzle</button>
-      <button class="chip" data-filter="action">Action</button>
-      <button class="chip" data-filter="arcade">Arcade</button>
-    </div>
-
+    <div class="sec-head reveal"><p class="eyebrow" style="margin-bottom:10px">Featured this week</p><h2 class="title">This week&rsquo;s spotlight.</h2></div>
     <div class="grid-cards">
-      <div class="gcard reveal" data-cat="game puzzle"><div class="gcard-art"><img src="assets/games/crazy-nail-pull.jpg" alt="Crazy Nail Pull" loading="lazy"><span class="badge">Puzzle</span><span class="g-play">&#9654;</span></div><h4>Crazy Nail Pull</h4><span>Puzzle</span></div>
-      <div class="gcard reveal" data-cat="game puzzle"><div class="gcard-art"><img src="assets/games/kitty-crush-saga.jpg" alt="KittyCrush Saga" loading="lazy"><span class="badge">Puzzle</span><span class="g-play">&#9654;</span></div><h4>KittyCrush Saga</h4><span>Puzzle</span></div>
-      <div class="gcard reveal" data-cat="game arcade"><div class="gcard-art"><img src="assets/games/fun-cat-go.jpg" alt="Fun Cat Go" loading="lazy"><span class="badge">Arcade</span><span class="g-play">&#9654;</span></div><h4>Fun Cat Go</h4><span>Arcade</span></div>
-      <div class="gcard reveal" data-cat="game puzzle"><div class="gcard-art"><img src="assets/games/shiba-detective.jpg" alt="Shiba Detective" loading="lazy"><span class="badge">Puzzle</span><span class="g-play">&#9654;</span></div><h4>Shiba Detective</h4><span>Puzzle</span></div>
-      <div class="gcard reveal" data-cat="game action"><div class="gcard-art"><img src="assets/games/vegetables-vs-zombies.jpg" alt="Vegetables VS Zombies" loading="lazy"><span class="badge">Action</span><span class="g-play">&#9654;</span></div><h4>Vegetables VS Zombies</h4><span>Action</span></div>
-      <div class="gcard reveal" data-cat="game puzzle"><div class="gcard-art"><img src="assets/games/kitty-escape.jpg" alt="Kitty Escape" loading="lazy"><span class="badge">Puzzle</span><span class="g-play">&#9654;</span></div><h4>Kitty Escape</h4><span>Puzzle</span></div>
-      <div class="gcard reveal" data-cat="game puzzle"><div class="gcard-art"><img src="assets/games/remove-screws-3d.jpg" alt="Remove Screws 3D" loading="lazy"><span class="badge">Puzzle</span><span class="g-play">&#9654;</span></div><h4>Remove Screws 3D</h4><span>Puzzle</span></div>
-      <div class="gcard reveal" data-cat="game puzzle"><div class="gcard-art"><img src="assets/games/tetris.jpg" alt="Tetris" loading="lazy"><span class="badge">Puzzle</span><span class="g-play">&#9654;</span></div><h4>Tetris</h4><span>Puzzle</span></div>
-      <div class="gcard reveal" data-cat="game"><div class="gcard-art"><img src="assets/games/monopoly.jpg" alt="Monopoly" loading="lazy"><span class="badge">Board</span><span class="g-play">&#9654;</span></div><h4>Monopoly</h4><span>Board</span></div>
-      <div class="gcard reveal" data-cat="game"><div class="gcard-art"><img src="assets/games/fifa-rivals.jpg" alt="FIFA Rivals" loading="lazy"><span class="badge">Sports</span><span class="g-play">&#9654;</span></div><h4>FIFA Rivals</h4><span>Sports</span></div>
-      <div class="gcard reveal" data-cat="game arcade"><div class="gcard-art"><img src="assets/games/slither.jpg" alt="Slither" loading="lazy"><span class="badge">Arcade</span><span class="g-play">&#9654;</span></div><h4>Slither</h4><span>Arcade</span></div>
-      <div class="gcard reveal" data-cat="game"><div class="gcard-art"><img src="assets/games/cooking-star.jpg" alt="Cooking Star" loading="lazy"><span class="badge">Simulation</span><span class="g-play">&#9654;</span></div><h4>Cooking Star</h4><span>Simulation</span></div>
-      <div class="gcard reveal" data-cat="drama"><div class="gcard-art"><img src="assets/games/drama-built-on-lies.jpg" alt="Our Love, Built on Lies" loading="lazy"><span class="badge badge--drama">Drama</span><span class="g-play">&#9654;</span></div><h4>Our Love, Built on Lies</h4><span>Romance · 24 ep</span></div>
-      <div class="gcard reveal" data-cat="drama"><div class="gcard-art"><img src="assets/games/drama-walked-away.jpg" alt="When He Walked Away" loading="lazy"><span class="badge badge--drama">Drama</span><span class="g-play">&#9654;</span></div><h4>When He Walked Away</h4><span>Romance · 30 ep</span></div>
-      <div class="gcard reveal" data-cat="drama"><div class="gcard-art"><img src="assets/games/drama-dont-mess.jpg" alt="Don't Mess With Mother" loading="lazy"><span class="badge badge--drama">Drama</span><span class="g-play">&#9654;</span></div><h4>Don&rsquo;t Mess With Mother</h4><span>Revenge · 28 ep</span></div>
-      <div class="gcard reveal" data-cat="drama"><div class="gcard-art"><img src="assets/games/drama-real-god.jpg" alt="Play Boy? Real God!" loading="lazy"><span class="badge badge--drama">Drama</span><span class="g-play">&#9654;</span></div><h4>Play Boy? Real God!</h4><span>Fantasy · 40 ep</span></div>
-      <div class="gcard reveal" data-cat="drama"><div class="gcard-art"><img src="assets/games/drama-digi-abyss.jpg" alt="Digi Abyss" loading="lazy"><span class="badge badge--drama">Drama</span><span class="g-play">&#9654;</span></div><h4>Digi Abyss</h4><span>Sci-fi · 22 ep</span></div>
-      <div class="gcard reveal" data-cat="drama"><div class="gcard-art"><img src="assets/games/drama-rich-boy.jpg" alt="Taming the Rich Boy" loading="lazy"><span class="badge badge--drama">Drama</span><span class="g-play">&#9654;</span></div><h4>Taming the Rich Boy</h4><span>Romance · 26 ep</span></div>
-      <div class="gcard reveal" data-cat="drama"><div class="gcard-art"><img src="assets/games/drama-backbound.jpg" alt="Pactbound Evolution" loading="lazy"><span class="badge badge--drama">Drama</span><span class="g-play">&#9654;</span></div><h4>Pactbound Evolution</h4><span>Fantasy · 35 ep</span></div>
-      <div class="gcard reveal" data-cat="drama"><div class="gcard-art"><img src="assets/games/drama-baby-superstar.jpg" alt="Adorable Baby Song Star" loading="lazy"><span class="badge badge--drama">Drama</span><span class="g-play">&#9654;</span></div><h4>Adorable Baby Song Star</h4><span>Family · 18 ep</span></div>
-      <div class="gcard reveal" data-cat="live"><div class="gcard-art" style="background:linear-gradient(150deg,#3838ff,#00c6ff)"><span class="badge" style="background:var(--lime);color:#0a0a1c">&#9679; Live</span><span class="g-play">&#9654;</span></div><h4>Tap Race Royale</h4><span>Bullet-chat · 12.4k</span></div>
-      <div class="gcard reveal" data-cat="live"><div class="gcard-art" style="background:linear-gradient(150deg,#11998e,#38ef7d)"><span class="badge" style="background:var(--lime);color:#0a0a1c">&#9679; Live</span><span class="g-play">&#9654;</span></div><h4>Brain Blitz Live</h4><span>Trivia · 8.1k</span></div>
-      <div class="gcard reveal" data-cat="live"><div class="gcard-art" style="background:linear-gradient(150deg,#fc466b,#3f5efb)"><span class="badge" style="background:var(--lime);color:#0a0a1c">&#9679; Live</span><span class="g-play">&#9654;</span></div><h4>Drop or Win</h4><span>Predict · 5.7k</span></div>
-      <div class="gcard reveal" data-cat="live"><div class="gcard-art" style="background:linear-gradient(150deg,#f7971e,#ffd200)"><span class="badge" style="background:var(--lime);color:#0a0a1c">&#9679; Live</span><span class="g-play">&#9654;</span></div><h4>Last Tap Standing</h4><span>Arena · 20.2k</span></div>
+      <a class="gcard reveal d1" href="drama.html"><div class="gcard-art"><img src="assets/games/fifa-rivals.jpg" alt="FIFA Rivals" loading="lazy"><span class="badge">Sports</span><span class="g-play">&#9654;</span></div><h4>FIFA Rivals</h4><span>Featured</span></a>
+      <a class="gcard reveal d2" href="drama.html"><div class="gcard-art"><img src="assets/games/kitty-crush-saga.jpg" alt="KittyCrush Saga" loading="lazy"><span class="badge">Puzzle</span><span class="g-play">&#9654;</span></div><h4>KittyCrush Saga</h4><span>Featured</span></a>
+      <a class="gcard reveal d3" href="drama.html"><div class="gcard-art"><img src="assets/games/drama-rich-boy.jpg" alt="Taming the Rich Boy" loading="lazy"><span class="badge badge--drama">Drama</span><span class="g-play">&#9654;</span></div><h4>Taming the Rich Boy</h4><span>Featured</span></a>
+      <a class="gcard reveal d4" href="drama.html"><div class="gcard-art"><img src="assets/games/slither.jpg" alt="Slither" loading="lazy"><span class="badge">Arcade</span><span class="g-play">&#9654;</span></div><h4>Slither</h4><span>Featured</span></a>
     </div>
   </div>
 </section>
 
+<!-- NEW & UPCOMING PARTNERSHIPS -->
 <section class="section">
   <div class="wrap">
-    <div class="panel reveal" style="background:var(--accent);color:#fff;text-align:center;align-items:center">
-      <h3 style="color:#fff">Every tap can earn.</h3>
-      <p style="color:#eaeaff;max-width:54ch;margin:0 auto;font-size:1.1rem">Play games, finish episodes and join live rounds to collect rewards across the PlaysOut ecosystem — fun first, perks included.</p>
-      <a href="#" class="btn btn--dark" style="margin-top:30px;align-self:center">See how rewards work <span class="arrow">&rarr;</span></a>
+    <div class="sec-head reveal"><p class="eyebrow" style="margin-bottom:10px">Partnerships</p><h2 class="title">New worlds, incoming.</h2></div>
+    <div class="partner-cards">
+      <div class="pcard reveal d1"><div class="pcard-img"><img src="assets/ip/eros-now.jpg" alt="Eros Now" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-b"><h4>Eros Now</h4><span>Live</span></div></div>
+      <div class="pcard reveal d2"><div class="pcard-img"><img src="assets/ip/doge-dungeon.jpg" alt="DogeOS" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-b"><h4>DogeOS</h4><span>Live</span></div></div>
+      <div class="pcard reveal d3"><div class="pcard-img"><img src="assets/ip/fifa-rivals.jpg" alt="FIFA Rivals" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-b"><h4>FIFA Rivals</h4><span>Live</span></div></div>
+      <div class="pcard reveal d4"><div class="pcard-img"><span class="soon-txt">More soon</span></div><div class="pcard-b"><h4>New drops</h4><span class="soon">Coming</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN THE COMMUNITY -->
+<section class="section" id="community">
+  <div class="wrap">
+    <div class="community reveal">
+      <h2 class="title">Come build the community with us.</h2>
+      <p class="lead" style="margin:16px auto 0;max-width:52ch">Tournaments, sneak peeks, giveaways and first access &mdash; it all happens in our channels. Pull up a seat.</p>
+      <div class="socials-row">
+        <a class="soc-btn" href="https://t.me/PlaysOut" target="_blank" rel="noopener">&#9992; Telegram</a>
+        <a class="soc-btn" href="https://x.com/itplaysout" target="_blank" rel="noopener">&#120143; X</a>
+        <a class="soc-btn" href="#" target="_blank" rel="noopener">&#9679; Discord</a>
+      </div>
     </div>
   </div>
 </section>
@@ -94,17 +114,17 @@
     <div class="footer-top">
       <div class="footer-brand"><img class="footer-icon" src="assets/playsout-icon.png" alt="PlaysOut" /></div>
       <div><h5>Join Us</h5><ul><li><a href="https://x.com/itplaysout">X</a></li><li><a href="https://t.me/PlaysOut">Telegram</a></li><li><a href="https://www.linkedin.com/company/playsout/">LinkedIn</a></li></ul></div>
-      <div><h5>Hub</h5><ul><li><a href="dev-arena.html">How To</a></li><li><a href="#">Investors</a></li><li><a href="#">Traffic Partners</a></li></ul></div>
-      <div><h5>Ecosystem</h5><ul><li><a href="mailto:contact@playsout.com">Get in touch</a></li><li><a href="drama.html">Originals</a></li><li><a href="hub.html">Hub</a></li></ul></div>
+      <div><h5>Explore</h5><ul><li><a href="drama.html">Originals</a></li><li><a href="dev-arena.html">Developers</a></li><li><a href="investors.html">Investors</a></li></ul></div>
+      <div><h5>Ecosystem</h5><ul><li><a href="mailto:contact@playsout.com">Get in touch</a></li><li><a href="play.html">Get the app</a></li><li><a href="index.html#news">News</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <span>2025 © PlaysOut.</span><span>All Rights Reserved.</span><a href="mailto:contact@playsout.com">contact@playsout.com</a>
+      <span>2026 &copy; PlaysOut.</span><span>All Rights Reserved.</span><a href="mailto:contact@playsout.com">contact@playsout.com</a>
       <span class="spacer"></span>
-      <div class="socials"><a href="https://t.me/PlaysOut" aria-label="Telegram">✈</a><a href="https://x.com/itplaysout" aria-label="X">𝕏</a><a href="https://www.linkedin.com/company/playsout/" aria-label="LinkedIn">in</a></div>
+      <div class="socials"><a href="https://t.me/PlaysOut" aria-label="Telegram">&#9992;</a><a href="https://x.com/itplaysout" aria-label="X">&#120143;</a><a href="https://www.linkedin.com/company/playsout/" aria-label="LinkedIn">in</a></div>
     </div>
   </div>
 </footer>
 
-<script src="assets/script.js"></script>
+<script src="assets/script.js?v=3"></script>
 </body>
 </html>
