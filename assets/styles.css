@@ -307,6 +307,16 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
   width:min(700px,92%);height:260px;background:radial-gradient(ellipse at center,rgba(73,92,245,.38),transparent 70%);filter:blur(22px)}
 .cta-final>*{position:relative;z-index:1}
 @media(max-width:600px){.cta-final{padding:48px 22px}}
+/* App store buttons */
+.store-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.store-btn{display:inline-flex;align-items:center;gap:12px;padding:9px 9px 9px 18px;border-radius:100px;
+  background:var(--accent);color:#fff;transition:transform .2s var(--ease),filter .2s}
+.store-btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.store-ico{width:25px;height:25px;flex:none}
+.store-txt{display:flex;flex-direction:column;line-height:1.04;text-align:left}
+.store-txt small{font-size:.64rem;opacity:.88;font-weight:500;letter-spacing:.01em}
+.store-txt strong{font-size:1.04rem;font-weight:700}
+.store-arrow{width:34px;height:34px;flex:none;border-radius:50%;background:#fff;color:#111;display:grid;place-items:center;font-weight:700;margin-left:4px}
 /* Statement headline glow-up */
 .statement-wrap{position:relative;max-width:1000px;margin:0 auto;text-align:center;z-index:0}
 .statement-wrap::before{content:"";position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);
