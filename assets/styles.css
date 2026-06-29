@@ -261,6 +261,21 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
   transition:gap .2s,filter .2s,transform .2s}
 .duo-cta:hover{gap:15px;filter:brightness(1.07)}
 @media(max-width:860px){.duo{grid-template-columns:1fr}.duo-card{padding:38px 30px}}
+/* Statement headline glow-up */
+.statement-wrap{position:relative;max-width:1000px;margin:0 auto;text-align:center;z-index:0}
+.statement-wrap::before{content:"";position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);
+  width:min(620px,86%);height:300px;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse at center,rgba(73,92,245,.30),transparent 70%);filter:blur(22px)}
+.pill-eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 17px;border-radius:100px;margin-bottom:24px;
+  border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);backdrop-filter:blur(6px);
+  font-size:.82rem;font-weight:600;letter-spacing:.01em;color:var(--periwinkle)}
+.pill-eyebrow .dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#98A3FF,#38E1FF);
+  box-shadow:0 0 10px rgba(56,225,255,.85);animation:pulse-dot 2.4s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.8)}}
+.grad-text{background:linear-gradient(100deg,#98A3FF 0%,#7B8CFF 24%,#38E1FF 55%,#FF4D9D 92%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+  background-size:220% auto;animation:gradslide 7s linear infinite}
+@keyframes gradslide{to{background-position:220% center}}
 
 /* ---------------- Statement + periwinkle panels ---------------- */
 .statement{text-align:center;max-width:18ch;margin:0 auto}
