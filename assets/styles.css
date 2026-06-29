@@ -300,6 +300,13 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 .ipcard-body h3{font-family:var(--display);font-weight:800;font-size:1.4rem;color:#fff;margin-bottom:8px}
 .ipcard-body p{color:var(--text-dim);font-size:.96rem;line-height:1.5}
 @media(max-width:860px){.ip-grid{grid-template-columns:1fr}}
+/* Final CTA — dark glass with glow (replaces flat panel) */
+.cta-final{position:relative;text-align:center;padding:64px 32px;border-radius:28px;overflow:hidden;
+  background:linear-gradient(170deg,rgba(255,255,255,.05),rgba(255,255,255,.012));border:1px solid rgba(255,255,255,.09)}
+.cta-final::before{content:"";position:absolute;left:50%;top:-10%;transform:translateX(-50%);z-index:0;pointer-events:none;
+  width:min(700px,92%);height:260px;background:radial-gradient(ellipse at center,rgba(73,92,245,.38),transparent 70%);filter:blur(22px)}
+.cta-final>*{position:relative;z-index:1}
+@media(max-width:600px){.cta-final{padding:48px 22px}}
 /* Statement headline glow-up */
 .statement-wrap{position:relative;max-width:1000px;margin:0 auto;text-align:center;z-index:0}
 .statement-wrap::before{content:"";position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);
