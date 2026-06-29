@@ -231,6 +231,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
   mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
 .logo-track{display:flex;align-items:center;gap:72px;width:max-content;animation:logoscroll 50s linear infinite}
 .logo-marquee:hover .logo-track{animation-play-state:paused}
+.logo-track.rev{animation-direction:reverse}
 @keyframes logoscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .logo-chip{flex:none;display:inline-flex;align-items:center;justify-content:center;height:40px}
 .logo-chip img{height:40px;width:auto;max-width:190px;object-fit:contain;opacity:.82;transition:opacity .2s}
