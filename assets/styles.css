@@ -237,12 +237,13 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 .logo-chip:hover img{opacity:1}
 .logo-text{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1;color:#fff;opacity:.8;white-space:nowrap}
 /* Audience duo cards (For Creators / For Super Apps) */
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:54px}
+.duo{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
 .duo-card{--ac:#98A3FF;--acsoft:rgba(152,163,255,.20);--acline:rgba(152,163,255,.55);
   position:relative;overflow:hidden;border-radius:26px;padding:46px 42px;display:flex;flex-direction:column;
   background:linear-gradient(165deg,rgba(255,255,255,.055),rgba(255,255,255,.012));
   border:1px solid rgba(255,255,255,.09);transition:transform .3s ease,border-color .3s,box-shadow .3s}
 .duo-card.alt{--ac:#38E1FF;--acsoft:rgba(56,225,255,.18);--acline:rgba(56,225,255,.5)}
+.duo-card.adv{--ac:#FF4D9D;--acsoft:rgba(255,77,157,.18);--acline:rgba(255,77,157,.5)}
 .duo-card::before{content:"";position:absolute;top:-45%;right:-25%;width:65%;height:85%;
   background:radial-gradient(circle,var(--ac),transparent 68%);opacity:.16;pointer-events:none;transition:opacity .3s}
 .duo-card:hover{transform:translateY(-6px);border-color:var(--acline);box-shadow:0 26px 64px -28px rgba(0,0,0,.75)}
@@ -260,7 +261,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
   font-weight:700;font-size:.98rem;color:#0c0c1f;background:var(--ac);padding:14px 24px;border-radius:100px;
   transition:gap .2s,filter .2s,transform .2s}
 .duo-cta:hover{gap:15px;filter:brightness(1.07)}
-@media(max-width:860px){.duo{grid-template-columns:1fr}.duo-card{padding:38px 30px}}
+@media(max-width:1024px){.duo{grid-template-columns:1fr}.duo-card{padding:38px 32px}}
 /* Statement headline glow-up */
 .statement-wrap{position:relative;max-width:1000px;margin:0 auto;text-align:center;z-index:0}
 .statement-wrap::before{content:"";position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);
