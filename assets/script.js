@@ -72,3 +72,19 @@
   if(n) n.addEventListener("click",function(){ rail.scrollBy({left:step(),behavior:"smooth"}); });
   if(p) p.addEventListener("click",function(){ rail.scrollBy({left:-step(),behavior:"smooth"}); });
 })();
+
+/* Gameplay reels — autoplay muted loops only while on screen */
+(function(){
+  var vids = document.querySelectorAll('video.reel-vid');
+  if(!vids.length) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      var v = e.target;
+      if(e.isIntersecting){ v.play().catch(function(){}); }
+      else { v.pause(); }
+    });
+  }, { threshold: 0.35 });
+  vids.forEach(function(v){ io.observe(v); });
+})();

@@ -26,3 +26,10 @@ assets/partners/images.png
 assets/partners/logo-192_192.png
 assets/partners/wechat-logo-icon_*.avif
 assets/partners/.DS_Store
+
+# original (uncompressed) source videos — keep only the optimized slug versions
+assets/video/.DS_Store
+assets/video/Brain Blitz Live.mp4
+assets/video/Drop or Win.mp4
+assets/video/Last Tap Standing.mp4
+assets/video/Tap Race Royale.mp4

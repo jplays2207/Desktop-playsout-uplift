@@ -1,0 +1,15 @@
+DROP GAMEPLAY VIDEOS HERE
+=========================
+Put short gameplay clips in THIS folder (assets/video/).
+
+NAMING: match the game's cover, e.g.  crazy-nail-pull.mp4  (uses crazy-nail-pull.jpg as the still frame)
+  Current reel slots on the Originals page: crazy-nail-pull, fun-cat-go, shiba-detective, cooking-star
+  (Drop any names you like and tell me — I'll wire them to the right tiles + captions.)
+
+FORMAT:
+  - .mp4 (H.264 video / AAC audio) — most compatible
+  - Vertical 9:16 looks best (phone gameplay). ~5-15 sec loops.
+  - Keep each file small for web (aim < 3-5 MB). They autoplay MUTED and loop while on screen.
+
+Until a video is added, the tile just shows the cover image (no broken state).
+After adding, say "they're in" and I'll confirm + push.
