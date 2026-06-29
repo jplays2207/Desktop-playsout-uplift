@@ -15,3 +15,14 @@ assets/games/_DROP_IMAGES_HERE.txt
 _logocheck/
 assets/logos/download-*.png
 assets/logos/*_chk.*.png
+
+# partner logo source/debug files (renamed copies are what the site uses)
+assets/partners/_pcheck/
+assets/partners/download-*.png
+assets/partners/*_chk.*
+assets/partners/Douyin-*.png
+assets/partners/Logotipo_*.png
+assets/partners/images.png
+assets/partners/logo-192_192.png
+assets/partners/wechat-logo-icon_*.avif
+assets/partners/.DS_Store
