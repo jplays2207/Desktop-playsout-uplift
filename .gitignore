@@ -10,3 +10,8 @@ Thumbs.db
 assets/games/*copy.*
 assets/games/.DS_Store
 assets/games/_DROP_IMAGES_HERE.txt
+
+# stray logo debug / duplicate downloads (not used by the site)
+_logocheck/
+assets/logos/download-*.png
+assets/logos/*_chk.*.png
