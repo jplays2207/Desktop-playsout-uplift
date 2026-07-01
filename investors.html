@@ -29,21 +29,23 @@
   #area.show{display:grid}
   #area h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,4vw,3.4rem);color:#fff;max-width:18ch}
   #area p{color:var(--text-dim);margin-top:18px;max-width:52ch}
-  #area h1{margin:0 auto}
-  .inv-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:840px;margin:42px auto 0;text-align:left}
-  .inv-card{display:flex;flex-direction:column;gap:12px;padding:34px 30px;border-radius:22px;
-    background:linear-gradient(170deg,rgba(255,255,255,.05),rgba(255,255,255,.012));border:1px solid rgba(255,255,255,.09);
-    transition:transform .3s,border-color .3s,box-shadow .3s}
-  .inv-card:hover{transform:translateY(-6px);border-color:rgba(73,92,245,.55);box-shadow:0 24px 56px -26px rgba(0,0,0,.7)}
-  .inv-ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;
-    background:rgba(152,163,255,.16);box-shadow:inset 0 0 0 1px rgba(152,163,255,.4)}
-  .inv-card h3{font-family:var(--display);font-weight:800;font-size:1.5rem;color:#fff;margin:0}
-  .inv-card p{color:var(--text-dim);margin:0;font-size:.98rem;line-height:1.5;max-width:none}
-  .inv-card .go{margin-top:6px;color:var(--periwinkle);font-weight:700;font-size:.95rem}
-  .inv-card.alt:hover{border-color:rgba(255,194,75,.55)}
-  .inv-card.alt .inv-ico{background:rgba(255,194,75,.15);box-shadow:inset 0 0 0 1px rgba(255,194,75,.45)}
-  .inv-card.alt .go{color:var(--gold)}
-  @media(max-width:720px){.inv-cards{grid-template-columns:1fr}}
+  #area h1{margin:0 auto;max-width:20ch}
+  .docs{max-width:760px;margin:46px auto 0;text-align:left;border-top:1px solid rgba(255,255,255,.10)}
+  a.doc,.doc{display:flex;align-items:center;gap:20px;padding:24px 6px;border-bottom:1px solid rgba(255,255,255,.10);
+    color:inherit;transition:background .2s,padding .2s}
+  a.doc:hover{background:rgba(255,255,255,.025);padding-left:14px;padding-right:14px}
+  .doc-ico{width:46px;height:46px;flex:none;border-radius:12px;display:grid;place-items:center;color:var(--periwinkle);
+    border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03)}
+  .doc-ico svg{width:22px;height:22px}
+  .doc-body{flex:1;min-width:0}
+  .doc-body h3{font-family:var(--font);font-weight:700;font-size:1.08rem;color:#fff;margin:0}
+  .doc-body p{color:var(--text-dim);font-size:.9rem;margin:4px 0 0;max-width:none}
+  .doc-cta{color:var(--periwinkle);font-weight:700;font-size:.9rem;white-space:nowrap}
+  a.doc.alt .doc-ico,a.doc.alt .doc-cta{color:var(--gold)}
+  .doc.soon{opacity:.5;cursor:default}
+  .doc.soon .doc-ico,.doc.soon .doc-cta{color:var(--text-mute)}
+  .docs-note{max-width:760px;margin:16px auto 0;text-align:left;font-size:.82rem;color:var(--text-mute);padding:0 6px}
+  @media(max-width:600px){a.doc,.doc{gap:14px}.doc-cta{display:none}}
 </style>
 </head>
 <body>
@@ -65,24 +67,28 @@
 <!-- ===== UNLOCKED AREA (placeholder — real content added later) ===== -->
 <section id="area">
   <div>
-    <p class="eyebrow" style="color:var(--periwinkle);margin-bottom:12px;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:800">Investor area</p>
-    <h1>Two ways to look at PlaysOut.</h1>
-    <p style="margin-left:auto;margin-right:auto">The business and the token &mdash; dive into whichever you&rsquo;re here for.</p>
-    <div class="inv-cards">
-      <a class="inv-card" href="https://playsout-site.vercel.app/deck" target="_blank" rel="noopener">
-        <span class="inv-ico" aria-hidden="true">&#128202;</span>
-        <h3>PlaysOut, the business</h3>
-        <p>The company deck &mdash; vision, traction, model and the road ahead.</p>
-        <span class="go">Open the deck &rarr;</span>
+    <p class="eyebrow" style="color:var(--periwinkle);margin-bottom:12px;text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:800">Investor materials</p>
+    <h1>The business, and the token.</h1>
+    <p style="margin-left:auto;margin-right:auto">Everything you need to underwrite PlaysOut.</p>
+    <div class="docs">
+      <a class="doc" href="https://playsout-site.vercel.app/deck" target="_blank" rel="noopener">
+        <span class="doc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 16.5h4"/></svg></span>
+        <span class="doc-body"><h3>PlaysOut &mdash; the company</h3><p>Vision, traction, business model and roadmap.</p></span>
+        <span class="doc-cta">View &rarr;</span>
       </a>
-      <a class="inv-card alt" href="https://playsout-site.vercel.app/state-of-PLAY.html" target="_blank" rel="noopener">
-        <span class="inv-ico" aria-hidden="true">&#129689;</span>
-        <h3>$PLAY, the token</h3>
-        <p>State of PLAY &mdash; the token thesis, utility and mechanics.</p>
-        <span class="go">Read State of PLAY &rarr;</span>
+      <a class="doc alt" href="https://playsout-site.vercel.app/state-of-PLAY.html" target="_blank" rel="noopener">
+        <span class="doc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M14.5 9.3c-.5-.8-1.4-1.3-2.5-1.3-1.5 0-2.6.8-2.6 2 0 2.8 5.2 1.4 5.2 4 0 1.2-1.1 2-2.6 2-1.1 0-2-.5-2.5-1.3M12 6.5v11"/></svg></span>
+        <span class="doc-body"><h3>$PLAY &mdash; the token</h3><p>State of PLAY: token thesis, utility and mechanics.</p></span>
+        <span class="doc-cta">View &rarr;</span>
       </a>
+      <div class="doc soon">
+        <span class="doc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7a1 1 0 0 1 1-1h4l2 2h8a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7z"/></svg></span>
+        <span class="doc-body"><h3>Metrics &amp; data room</h3><p>Financials, model and diligence materials.</p></span>
+        <span class="doc-cta">Coming soon</span>
+      </div>
     </div>
-    <div class="hero-cta" style="justify-content:center;margin-top:36px">
+    <p class="docs-note">Additional materials are added on an ongoing basis.</p>
+    <div class="hero-cta" style="justify-content:center;margin-top:40px">
       <a href="mailto:jassem@playsout.com?subject=Investor%20enquiry" class="btn btn--blue">Get in touch <span class="arrow">&rarr;</span></a>
       <a href="index.html" class="btn btn--dark">Back to site <span class="arrow">&rarr;</span></a>
     </div>
