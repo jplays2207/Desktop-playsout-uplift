@@ -446,6 +446,9 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 .footer li a:hover{color:#fff}
 .footer-bottom{display:flex;align-items:center;gap:40px;flex-wrap:wrap;padding-top:34px;border-top:1px solid var(--line);color:var(--text-dim);font-size:.9rem}
 .footer-bottom .spacer{flex:1}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap}
+.footer-legal a{color:var(--text-dim);font-size:.88rem;transition:color .2s}
+.footer-legal a:hover{color:#fff}
 .socials{display:flex;gap:16px}
 .socials a{width:30px;height:30px;display:grid;place-items:center;color:#fff;opacity:.85;transition:opacity .2s}
 .socials a:hover{opacity:1}
