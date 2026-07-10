@@ -368,19 +368,6 @@
   </div>
 </section>
 
-<!-- NEW & UPCOMING PARTNERSHIPS -->
-<section class="section">
-  <div class="wrap">
-    <div class="sec-head reveal"><p class="eyebrow" style="margin-bottom:10px">Partnerships</p><h2 class="title">New worlds, incoming.</h2></div>
-    <div class="partner-cards">
-      <div class="pcard reveal d1"><div class="pcard-img"><img src="assets/ip/eros-now.jpg" alt="Eros Now" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-b"><h4>Eros Now</h4><span>Live</span></div></div>
-      <div class="pcard reveal d2"><div class="pcard-img"><img src="assets/ip/doge-dungeon.jpg" alt="DogeOS" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-b"><h4>DogeOS</h4><span>Live</span></div></div>
-      <div class="pcard reveal d3"><div class="pcard-img"><img src="assets/ip/fifa-rivals.jpg" alt="FIFA Rivals" loading="lazy" onerror="this.style.display='none'"></div><div class="pcard-b"><h4>FIFA Rivals</h4><span>Live</span></div></div>
-      <div class="pcard reveal d4"><div class="pcard-img"><span class="soon-txt">More soon</span></div><div class="pcard-b"><h4>New drops</h4><span class="soon">Coming</span></div></div>
-    </div>
-  </div>
-</section>
-
 <!-- JOIN THE COMMUNITY -->
 <section class="section" id="community">
   <div class="wrap">
@@ -574,7 +561,7 @@ function renderPassport(){
     const stamps = Array.from({length: c.total}, (_, i) =>
       `<span class="stamp ${i < c.demo ? "got" : ""}" style="--acstamp:${c.color}">${i < c.demo ? "&#10003;" : ""}</span>`
     ).join("");
-    return `<div class="pp-card reveal ${complete ? "complete" : ""}" data-pct="${Math.round(c.demo/c.total*100)}">
+    return `<div class="pp-card ${complete ? "complete" : ""}" data-pct="${Math.round(c.demo/c.total*100)}">
       <div class="pp-head"><h4>${c.name}</h4><span class="pp-count"><b>${c.demo}</b>/${c.total}</span></div>
       <div class="pp-stamps">${stamps}</div>
       <div class="pp-bar"><i style="--w:${Math.round(c.demo/c.total*100)}%;background:linear-gradient(90deg,var(--accent),${c.color})"></i></div>
