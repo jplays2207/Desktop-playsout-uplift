@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /investors.html
+
+Sitemap: https://playsout.com/sitemap.xml
