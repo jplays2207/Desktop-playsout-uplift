@@ -2,8 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/grab", "destination": "/grabSG", "permanent": false }
+  ],
   "rewrites": [
-    { "source": "/grab", "destination": "/grab.html" }
+    { "source": "/grabSG", "destination": "/grab.html" }
   ],
   "headers": [
     {
