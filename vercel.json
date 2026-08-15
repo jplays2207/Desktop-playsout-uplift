@@ -5,9 +5,6 @@
   "redirects": [
     { "source": "/grab", "destination": "/grabSG", "permanent": false }
   ],
-  "rewrites": [
-    { "source": "/grabSG", "destination": "/grab.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
