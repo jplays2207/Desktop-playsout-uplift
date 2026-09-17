@@ -1,0 +1,5 @@
+@import url('../../shared/game-shell.css');
+
+.playsout-game--rio-rush {
+  --game-canvas-background: #0d1017;
+}

@@ -1,0 +1,5 @@
+@import url('../../shared/game-shell.css');
+
+.playsout-game--recycle-tycoon {
+  --game-canvas-background: #080a10;
+}

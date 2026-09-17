@@ -1,0 +1,5 @@
+@import url('../../shared/game-shell.css');
+
+.playsout-game--parcel-sort {
+  --game-canvas-background: #0b0e11;
+}
