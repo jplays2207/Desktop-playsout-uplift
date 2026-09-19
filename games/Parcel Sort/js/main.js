@@ -36,7 +36,7 @@ const GAME = Object.freeze({
   gameId: 3,
   slug: 'parcel-sort',
   title: 'PARCEL SORT',
-  hint: 'Tap to grab items · M mute · R restart',
+  hint: '点按夹取杂物 · M 静音 · R 重开',
 });
 const KEY_AXIS = {
   ArrowUp: [0, -1],

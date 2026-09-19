@@ -109,6 +109,7 @@ export function createGameShell(container, { gameId, slug, title, hint }) {
 }
 
 export function createScoreFlow({ gameId, auth, elements, onExit, onPlayAgain }) {
+  const activityEnabled = auth.activityEnabled !== false;
   let authStatus = 'guest';
   let pendingResult = null;
   let panelOpen = false;
@@ -285,6 +286,10 @@ export function createScoreFlow({ gameId, auth, elements, onExit, onPlayAgain })
 
   function completeRun(score, startedAt) {
     if (destroyed || panelOpen) return;
+    if (!activityEnabled) {
+      gameDebug('ScoreFlow', 'run.completed-after-activity-end', { gameId, score });
+      return;
+    }
     pendingResult = {
       gameId,
       score,
