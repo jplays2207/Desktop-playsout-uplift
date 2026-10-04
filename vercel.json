@@ -3,7 +3,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/grab", "destination": "/grabSG", "permanent": false }
+    { "source": "/grab", "destination": "/grabSG", "permanent": false },
+    { "source": "/privacy", "destination": "/PRIVACYPOLICY", "permanent": false }
   ],
   "headers": [
     {
