@@ -1,43 +1,9 @@
-# OS / editor cruft
+# This repo IS the live website — Vercel serves every committed file publicly.
+# Keep internal docs OUT of the deploy.
+
+# Internal markdown docs (handovers, deploy notes, etc.)
+*.md
+
+# OS cruft
 .DS_Store
-Thumbs.db
-*.log
-
-# Vercel
-.vercel
-
-# original (unoptimized) source game art — keep only the *.jpg optimized versions
-assets/games/*copy.*
-assets/games/.DS_Store
-assets/games/_DROP_IMAGES_HERE.txt
-
-# stray logo debug / duplicate downloads (not used by the site)
-_logocheck/
-assets/logos/download-*.png
-assets/logos/*_chk.*.png
-
-# partner logo source/debug files (renamed copies are what the site uses)
-assets/partners/_pcheck/
-assets/partners/download-*.png
-assets/partners/*_chk.*
-assets/partners/Douyin-*.png
-assets/partners/Logotipo_*.png
-assets/partners/images.png
-assets/partners/logo-192_192.png
-assets/partners/wechat-logo-icon_*.avif
-assets/partners/.DS_Store
-
-# original (uncompressed) source videos — keep only the optimized slug versions
-assets/video/.DS_Store
-assets/video/Brain Blitz Live.mp4
-assets/video/Drop or Win.mp4
-assets/video/Last Tap Standing.mp4
-assets/video/Tap Race Royale.mp4
-
-# IP card source/debug files (renamed optimized versions are what the site uses)
-assets/ip/_chk/
-assets/ip/.DS_Store
-assets/ip/eros now.png
-assets/ip/doge dungeon.jpg
-assets/ip/fifa rivals.png
-assets/ip/eros now.jpeg.jpg
+**/.DS_Store
