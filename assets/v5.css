@@ -342,3 +342,84 @@ html{scroll-padding-top:96px}
 .v5 .v3-arch-core .v3-core-grid span{font-size:.74rem!important}
 .v5 .v3-arch-h{font-size:.64rem!important}
 }
+
+/* ================= MOOD SWITCH ================= */
+.po-mood{position:fixed;left:18px;bottom:18px;z-index:9999;display:flex;align-items:center;gap:8px;padding:6px;border:0;background:none;cursor:pointer;opacity:.28;transition:opacity .3s}
+.po-mood:hover,.po-mood:focus-visible{opacity:1}
+.po-mood-track{position:relative;width:40px;height:18px;border-radius:999px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.po-mood-track i{position:absolute;top:3px;left:3px;width:12px;height:12px;border-radius:50%;background:#fff;transition:transform .35s cubic-bezier(.6,-.3,.4,1.4),background .3s,box-shadow .3s}
+.po-mood[data-pos="1"] .po-mood-track i{transform:translateX(11px);background:#FFC24B;box-shadow:0 0 8px #FFC24B}
+.po-mood[data-pos="2"] .po-mood-track i{transform:translateX(22px);background:#39FF14;box-shadow:0 0 10px #39FF14,0 0 18px #FF2BD6}
+.po-mood-label{font:500 .62rem/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:#fff;opacity:0;transform:translateX(-4px);transition:opacity .25s,transform .25s}
+.po-mood:hover .po-mood-label{opacity:.8;transform:none}
+
+/* LIGHT (milky): invert the dark design with extra contrast, warm it to off-white, flip media back */
+html[data-mood="light"]{filter:invert(1) hue-rotate(180deg) contrast(1.22);background:#f3ede2}
+html[data-mood="light"] img,html[data-mood="light"] video,html[data-mood="light"] picture,html[data-mood="light"] svg image,html[data-mood="light"] .po-mood,html[data-mood="light"] [style*="background-image"],html[data-mood="light"] .v5-icons span,html[data-mood="light"] .v5-pl-stack i{filter:contrast(.82) hue-rotate(180deg) invert(1)}
+html[data-mood="light"] body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;background:#0a1122;mix-blend-mode:screen}
+
+/* NEON: 80s disco. Deep violet night, sunset chrome headlines, hot pink + cyan glow */
+html[data-mood="neon"] body{--hl:#FF2E97;--live:#00F0FF;--periwinkle:#FF2E97;--accent:#FF2E97;--navy:#0d0221;background:#0d0221!important}
+html[data-mood="neon"] body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(60% 40% at 15% 10%,rgba(255,46,151,.22),transparent 70%),radial-gradient(50% 40% at 90% 20%,rgba(0,240,255,.16),transparent 70%),radial-gradient(70% 50% at 50% 110%,rgba(176,38,255,.3),transparent 70%)}
+html[data-mood="neon"] section,html[data-mood="neon"] footer,html[data-mood="neon"] .v3-sec-alt{background:transparent!important}
+html[data-mood="neon"] .hl,html[data-mood="neon"] h1 .hl,html[data-mood="neon"] h2 .hl{background:linear-gradient(180deg,#FFE53B 0%,#FF9A3C 38%,#FF2E97 70%,#B026FF 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;filter:drop-shadow(0 0 12px rgba(255,46,151,.55)) drop-shadow(0 0 30px rgba(176,38,255,.35))}
+html[data-mood="neon"] h1,html[data-mood="neon"] h2{color:#fff;text-shadow:0 0 6px #fff,0 0 18px rgba(0,240,255,.8),0 0 40px rgba(0,240,255,.4)}
+html[data-mood="neon"] .v3-mono,html[data-mood="neon"] .eyebrow,html[data-mood="neon"] .hero-eyebrow,html[data-mood="neon"] .v3-arch-h{color:#00F0FF!important;text-shadow:0 0 8px rgba(0,240,255,.8)}
+html[data-mood="neon"] .v3-node,html[data-mood="neon"] .fcard,html[data-mood="neon"] .v5-aud-card,html[data-mood="neon"] .v4-layer,html[data-mood="neon"] .ncard,html[data-mood="neon"] .v3-core-grid div,html[data-mood="neon"] .v5-flow-node,html[data-mood="neon"] .gate{background:rgba(26,4,52,.6)!important;box-shadow:inset 0 0 0 1px rgba(255,46,151,.6),0 0 22px -6px rgba(255,46,151,.7)!important}
+html[data-mood="neon"] .v3-arch-core{background:rgba(26,4,52,.75)!important;box-shadow:inset 0 0 0 1.5px #00F0FF,0 0 46px -6px rgba(0,240,255,.6)!important}
+html[data-mood="neon"] .v3-btn-solid,html[data-mood="neon"] section .btn--blue{background:linear-gradient(90deg,#FF2E97,#B026FF)!important;color:#fff!important;box-shadow:0 0 24px rgba(255,46,151,.7)!important;animation:poDisco 4s linear infinite}
+html[data-mood="neon"] .v3-btn-line,html[data-mood="neon"] .v5-aud-card .v3-tlink,html[data-mood="neon"] section .btn--dark{color:#00F0FF!important;box-shadow:inset 0 0 0 1.5px #00F0FF,0 0 16px -4px #00F0FF!important}
+@keyframes poDisco{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
+html[data-mood="neon"] .v3-grid-bg,html[data-mood="neon"] .page-hero::after,html[data-mood="neon"] .gate-wrap::after{background-image:linear-gradient(rgba(255,46,151,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(255,46,151,.35) 1px,transparent 1px)!important;background-size:64px 64px!important;transform:perspective(500px) rotateX(58deg);transform-origin:50% 100%;opacity:.7}
+html[data-mood="neon"] .v3-node b,html[data-mood="neon"] .v3-core-grid b,html[data-mood="neon"] h3,html[data-mood="neon"] h4,html[data-mood="neon"] .f-title{color:#FFE53B!important;text-shadow:0 0 10px rgba(255,229,59,.5)}
+html[data-mood="neon"] .nav-links a.active,html[data-mood="neon"] .nav-links a:hover{color:#FF2E97!important;text-shadow:0 0 10px #FF2E97}
+html[data-mood="neon"] .po-mood-track{box-shadow:inset 0 0 0 1px #FF2E97,0 0 10px #FF2E97}
+@media(prefers-reduced-motion:reduce){html[data-mood="neon"] .v3-btn-solid,html[data-mood="neon"] section .btn--blue{animation:none}}
+html[data-mood="neon"] .po-mood[data-pos="2"] .po-mood-track i{background:#FF2E97;box-shadow:0 0 10px #FF2E97,0 0 18px #00F0FF}
+@media(prefers-reduced-motion:reduce){.po-mood-track i{transition:none}}
+/* light mood: white brand marks and mono logos should flip to dark, so don't re-invert them */
+html[data-mood="light"] img[src*="playsout-logo"],html[data-mood="light"] img[src*="playsout-icon"],html[data-mood="light"] .v3-inv img,html[data-mood="light"] .brand-logo,html[data-mood="light"] footer img{filter:none!important}
+/* light: warm milky tint (pre-filter colour chosen so it lands beige after invert+hue-rotate) */
+html[data-mood="light"] body::after{background:#1c1408!important}
+/* neon: keep the sunset gradient visible, tighter glow */
+html[data-mood="neon"] .hl{text-shadow:none!important}
+html[data-mood="neon"] h1,html[data-mood="neon"] h2{text-shadow:0 0 2px #fff,0 0 12px rgba(0,240,255,.7),0 0 28px rgba(176,38,255,.45)!important}
+html[data-mood="neon"] .v3-hero::after{content:"";position:absolute;left:-10%;right:-10%;bottom:0;height:45%;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,46,151,.55) 1px,transparent 1px),linear-gradient(90deg,rgba(255,46,151,.55) 1px,transparent 1px);background-size:80px 40px;transform:perspective(420px) rotateX(62deg);transform-origin:50% 100%;-webkit-mask:linear-gradient(transparent,#000 60%);mask:linear-gradient(transparent,#000 60%);opacity:.55}
+html[data-mood="neon"] .v3-hero>*{position:relative;z-index:1}
+/* neon v2: green neon (overrides the disco pink/orange) */
+html[data-mood="neon"] body{--hl:#39FF14;--live:#39FF14;--periwinkle:#39FF14;--accent:#39FF14;background:#030a06!important}
+html[data-mood="neon"] body::before{background:radial-gradient(60% 40% at 15% 8%,rgba(57,255,20,.16),transparent 70%),radial-gradient(50% 40% at 90% 18%,rgba(0,240,255,.12),transparent 70%),radial-gradient(70% 50% at 50% 110%,rgba(57,255,20,.18),transparent 70%)!important}
+html[data-mood="neon"] .hl,html[data-mood="neon"] h1 .hl,html[data-mood="neon"] h2 .hl{background:linear-gradient(180deg,#E6FF4D 0%,#39FF14 55%,#00F0B0 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;filter:drop-shadow(0 0 10px rgba(57,255,20,.6)) drop-shadow(0 0 26px rgba(57,255,20,.3))!important}
+html[data-mood="neon"] h1,html[data-mood="neon"] h2{text-shadow:0 0 2px #fff,0 0 12px rgba(57,255,20,.55),0 0 28px rgba(57,255,20,.3)!important}
+html[data-mood="neon"] .v3-mono,html[data-mood="neon"] .eyebrow,html[data-mood="neon"] .hero-eyebrow,html[data-mood="neon"] .v3-arch-h{color:#39FF14!important;text-shadow:0 0 8px rgba(57,255,20,.8)!important}
+html[data-mood="neon"] .v3-node,html[data-mood="neon"] .fcard,html[data-mood="neon"] .v5-aud-card,html[data-mood="neon"] .v4-layer,html[data-mood="neon"] .ncard,html[data-mood="neon"] .v3-core-grid div,html[data-mood="neon"] .v5-flow-node,html[data-mood="neon"] .gate{background:rgba(4,22,10,.6)!important;box-shadow:inset 0 0 0 1px rgba(57,255,20,.5),0 0 20px -6px rgba(57,255,20,.6)!important}
+html[data-mood="neon"] .v3-arch-core{background:rgba(4,22,10,.75)!important;box-shadow:inset 0 0 0 1.5px #39FF14,0 0 46px -6px rgba(57,255,20,.6)!important}
+html[data-mood="neon"] .v3-btn-solid,html[data-mood="neon"] section .btn--blue{background:#39FF14!important;color:#03140a!important;box-shadow:0 0 24px rgba(57,255,20,.7)!important;animation:none!important}
+html[data-mood="neon"] .v3-btn-line,html[data-mood="neon"] .v5-aud-card .v3-tlink,html[data-mood="neon"] section .btn--dark{color:#39FF14!important;box-shadow:inset 0 0 0 1.5px #39FF14,0 0 16px -4px #39FF14!important}
+html[data-mood="neon"] .v3-node b,html[data-mood="neon"] .v3-core-grid b,html[data-mood="neon"] h3,html[data-mood="neon"] h4,html[data-mood="neon"] .f-title{color:#E6FF4D!important;text-shadow:0 0 10px rgba(230,255,77,.45)!important}
+html[data-mood="neon"] .nav-links a.active,html[data-mood="neon"] .nav-links a:hover{color:#39FF14!important;text-shadow:0 0 10px #39FF14!important}
+html[data-mood="neon"] .v3-hero::after,html[data-mood="neon"] .v3-grid-bg,html[data-mood="neon"] .page-hero::after,html[data-mood="neon"] .gate-wrap::after{background-image:linear-gradient(rgba(57,255,20,.45) 1px,transparent 1px),linear-gradient(90deg,rgba(57,255,20,.45) 1px,transparent 1px)!important}
+html[data-mood="neon"] .po-mood-track{box-shadow:inset 0 0 0 1px #39FF14,0 0 10px #39FF14!important}
+html[data-mood="neon"] .po-mood[data-pos="2"] .po-mood-track i{background:#39FF14!important;box-shadow:0 0 10px #39FF14,0 0 18px #39FF14!important}
+html[data-mood="neon"] .v5-aud-card li::before{background:#39FF14!important}
+/* neon v3: random colour via --neon / --neon-rgb (set by theme-toggle.js) */
+.po-mood-wrap{position:fixed;left:18px;bottom:18px;z-index:9999;display:flex;align-items:center;gap:4px}
+.po-mood-wrap .po-mood{position:static}
+.po-shuffle{display:none;width:26px;height:26px;border-radius:50%;border:0;cursor:pointer;font-size:13px;line-height:26px;color:var(--neon,#39FF14);background:rgba(255,255,255,.04);box-shadow:inset 0 0 0 1px rgba(var(--neon-rgb,57,255,20),.6),0 0 10px rgba(var(--neon-rgb,57,255,20),.5);opacity:.5;transition:opacity .2s,transform .3s}
+.po-shuffle:hover{opacity:1;transform:rotate(90deg)}
+html[data-mood="neon"] .po-shuffle{display:inline-block}
+html[data-mood="neon"] body{--hl:var(--neon);--live:var(--neon);--periwinkle:var(--neon);--accent:var(--neon);background:#040406!important}
+html[data-mood="neon"] body::before{background:radial-gradient(60% 40% at 15% 8%,rgba(var(--neon-rgb),.16),transparent 70%),radial-gradient(70% 50% at 50% 110%,rgba(var(--neon-rgb),.18),transparent 70%)!important}
+html[data-mood="neon"] .hl,html[data-mood="neon"] h1 .hl,html[data-mood="neon"] h2 .hl{background:linear-gradient(180deg,#fff -30%,var(--neon) 55%)!important;-webkit-background-clip:text!important;background-clip:text!important;filter:drop-shadow(0 0 10px rgba(var(--neon-rgb),.6)) drop-shadow(0 0 26px rgba(var(--neon-rgb),.3))!important}
+html[data-mood="neon"] h1,html[data-mood="neon"] h2{text-shadow:0 0 2px #fff,0 0 12px rgba(var(--neon-rgb),.55),0 0 28px rgba(var(--neon-rgb),.3)!important}
+html[data-mood="neon"] .v3-mono,html[data-mood="neon"] .eyebrow,html[data-mood="neon"] .hero-eyebrow,html[data-mood="neon"] .v3-arch-h{color:var(--neon)!important;text-shadow:0 0 8px rgba(var(--neon-rgb),.8)!important}
+html[data-mood="neon"] .v3-node,html[data-mood="neon"] .fcard,html[data-mood="neon"] .v5-aud-card,html[data-mood="neon"] .v4-layer,html[data-mood="neon"] .ncard,html[data-mood="neon"] .v3-core-grid div,html[data-mood="neon"] .v5-flow-node,html[data-mood="neon"] .gate{background:rgba(var(--neon-rgb),.05)!important;box-shadow:inset 0 0 0 1px rgba(var(--neon-rgb),.5),0 0 20px -6px rgba(var(--neon-rgb),.6)!important}
+html[data-mood="neon"] .v3-arch-core{background:rgba(var(--neon-rgb),.07)!important;box-shadow:inset 0 0 0 1.5px var(--neon),0 0 46px -6px rgba(var(--neon-rgb),.6)!important}
+html[data-mood="neon"] .v3-btn-solid,html[data-mood="neon"] section .btn--blue{background:var(--neon)!important;color:#050505!important;box-shadow:0 0 24px rgba(var(--neon-rgb),.7)!important}
+html[data-mood="neon"] .v3-btn-line,html[data-mood="neon"] .v5-aud-card .v3-tlink,html[data-mood="neon"] section .btn--dark{color:var(--neon)!important;box-shadow:inset 0 0 0 1.5px var(--neon),0 0 16px -4px var(--neon)!important}
+html[data-mood="neon"] .v3-node b,html[data-mood="neon"] .v3-core-grid b,html[data-mood="neon"] h3,html[data-mood="neon"] h4,html[data-mood="neon"] .f-title{color:color-mix(in srgb,var(--neon) 65%,#fff)!important;text-shadow:0 0 10px rgba(var(--neon-rgb),.45)!important}
+html[data-mood="neon"] .nav-links a.active,html[data-mood="neon"] .nav-links a:hover{color:var(--neon)!important;text-shadow:0 0 10px var(--neon)!important}
+html[data-mood="neon"] .v3-hero::after,html[data-mood="neon"] .v3-grid-bg,html[data-mood="neon"] .page-hero::after,html[data-mood="neon"] .gate-wrap::after{background-image:linear-gradient(rgba(var(--neon-rgb),.45) 1px,transparent 1px),linear-gradient(90deg,rgba(var(--neon-rgb),.45) 1px,transparent 1px)!important}
+html[data-mood="neon"] .po-mood-track{box-shadow:inset 0 0 0 1px var(--neon),0 0 10px var(--neon)!important}
+html[data-mood="neon"] .po-mood[data-pos="2"] .po-mood-track i{background:var(--neon)!important;box-shadow:0 0 10px var(--neon),0 0 18px var(--neon)!important}
+html[data-mood="neon"] .v5-aud-card li::before{background:var(--neon)!important}
