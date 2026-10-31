@@ -81,3 +81,9 @@ body.v5{--hl:#98A3FF;--live:#3ddc84;--card:rgba(255,255,255,.025);--hair-2:rgba(
 .v5 .v4-src{display:flex;align-items:center;height:28px}
 .v5 .v4-src img{height:22px;width:auto;max-width:150px;object-fit:contain;object-position:left center;opacity:.9}
 .v5 .v4-wm{font-family:var(--font);font-weight:800;font-size:1.05rem;letter-spacing:-.02em;text-transform:none;color:#fff;opacity:.9}
+
+/* app logos in the hero, under the subline (as on the deck cover) */
+.v4-hero-apps{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:36px}
+.v4-hero-apps .logo-chip,.v4-hero-apps .logo-chip img{height:40px}
+.v4-hero-apps .logo-chip img{border-radius:10px;max-width:120px}
+@media(max-width:760px){.v4-hero-apps .logo-chip,.v4-hero-apps .logo-chip img{height:34px}}
