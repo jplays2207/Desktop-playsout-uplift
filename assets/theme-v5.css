@@ -54,3 +54,37 @@ body.v5-page .v5-flow p{margin:0;font-size:.9rem;line-height:1.5;color:rgba(255,
 body.v5-page .v5-flow-free{font:600 .6rem/1 var(--mono,ui-monospace),monospace;letter-spacing:.1em;text-transform:uppercase;color:#3EE0A0;background:rgba(62,224,160,.12);box-shadow:inset 0 0 0 1px rgba(62,224,160,.35);padding:4px 7px;border-radius:999px}
 @media(max-width:900px){body.v5-page .v5-flow{grid-template-columns:1fr;gap:28px}body.v5-page .v5-flow::before,body.v5-page .v5-flow::after{display:none}body.v5-page .v5-flow li{flex-direction:row;flex-wrap:wrap;text-align:left;align-items:flex-start;gap:0 16px;padding-left:72px;min-height:56px}body.v5-page .v5-flow-node{position:absolute;left:0;top:0}body.v5-page .v5-flow-n{margin-top:0;width:100%}body.v5-page .v5-flow p{max-width:none}}
 @media(prefers-reduced-motion:reduce){body.v5-page .v5-flow::after{animation:none;display:none}}
+/* page title flows straight into its content: no divider, no double gap */
+body.v5-news .page-hero{padding-bottom:48px!important}
+body.v5-news .page-hero + .section{border-top:0!important;padding-top:0!important}
+body.v5-news .page-hero + .section::before{display:none!important}
+
+/* ================= ONE TYPE SYSTEM (matches homepage) ================= */
+/* eyebrows: mono, uppercase, bracketed, muted */
+body.v5-page .eyebrow,body.v5-page .hero-eyebrow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace!important;font-size:.74rem!important;font-weight:400!important;letter-spacing:.14em!important;text-transform:uppercase!important;color:rgba(255,255,255,.45)!important;line-height:1.4!important;margin:0 0 18px!important;background:none!important;-webkit-text-fill-color:currentColor!important}
+body.v5-page .eyebrow::before,body.v5-page .hero-eyebrow::before{content:"[ "}
+body.v5-page .eyebrow::after,body.v5-page .hero-eyebrow::after{content:" ]"}
+/* h1: same as homepage hero */
+body.v5-page h1{font-family:'Red Hat Display',sans-serif!important;font-weight:600!important;font-size:clamp(2.6rem,6.2vw,5.4rem)!important;line-height:1!important;letter-spacing:-.035em!important}
+body.v5-page .gate h1,body.v5-page #area h1{font-size:clamp(2rem,3.4vw,2.6rem)!important}
+/* h2: same as homepage section heads */
+body.v5-page h2,body.v5-page h2.title{font-family:'Red Hat Display',sans-serif!important;font-weight:600!important;font-size:clamp(2.2rem,4.2vw,3.4rem)!important;line-height:1.04!important;letter-spacing:-.035em!important}
+body.v5-page .sec-head,body.v5-page .sec-head.center{text-align:left!important;margin-left:0!important;margin-right:0!important}
+body.v5-page .sec-head .title{margin:0!important}
+/* hero subline */
+body.v5-page .page-hero p:not(.eyebrow),body.v5-page .hero .sub{font-size:1.2rem!important;line-height:1.5!important;font-weight:400!important;color:rgba(255,255,255,.62)!important}
+body.v5-page .lead{font-size:1.08rem!important;line-height:1.55!important;color:rgba(255,255,255,.62)!important}
+/* card titles + body */
+body.v5-page h3,body.v5-page h4,body.v5-page .fcard h4{font-family:'Red Hat Display',sans-serif!important;font-weight:600!important;font-size:1.15rem!important;line-height:1.25!important;letter-spacing:-.02em!important;color:#fff}
+body.v5-page .mini,body.v5-page .fcard p,body.v5-page .doc p,body.v5-page .v5-flow p{font-size:.92rem!important;line-height:1.5!important;color:rgba(255,255,255,.6)!important}
+/* buttons: same as homepage (44px, 10px radius, .95rem/600, plain arrow) */
+body.v5-page main .btn,body.v5-page section .btn{height:44px!important;padding:0 20px!important;border-radius:10px!important;font-family:'Red Hat Display',sans-serif!important;font-size:.95rem!important;font-weight:600!important;gap:8px!important;letter-spacing:0!important;text-transform:none!important}
+body.v5-page section .btn .arrow{width:auto!important;height:auto!important;background:none!important;color:inherit!important;border-radius:0!important;box-shadow:none!important}
+/* news cards */
+body.v5-page .ncard-outlet{font-weight:600!important;letter-spacing:-.01em!important}
+body.v5-page .ncard .tag,body.v5-page .tag{font-family:ui-monospace,SFMono-Regular,Menlo,monospace!important;font-weight:400!important;font-size:.7rem!important;letter-spacing:.14em!important}
+body.v5-page .ncard .read,body.v5-page .read{font-weight:600!important}
+body.v5-page .page-hero .eyebrow,body.v5-page .hero .hero-eyebrow,body.v5-page .gate .eyebrow,body.v5-page #area .eyebrow{display:block!important;text-align:center!important;margin:0 auto 18px!important}
+body.v5-page section .btn .arrow{font-size:1rem!important;line-height:1!important}
+body.v5-page section .btn--blue{background:#fff!important;color:#07070f!important;opacity:1!important}
+body.v5-page .feature-row:not(.tiles) .fcard{min-height:0!important;padding:24px 22px!important;display:flex!important;align-items:flex-start!important;justify-content:flex-start!important}
