@@ -321,3 +321,24 @@ body.v5-page .section:first-of-type{padding-top:var(--sec-y)!important}
 .v5 .v5-tiles .f-title{font-size:.98rem!important;line-height:1.25;margin-top:10px!important;min-height:2.5em;display:flex;align-items:center;justify-content:center}
 .v5 .v5-tiles .f-desc{font-size:.84rem!important;line-height:1.45}
 html{scroll-padding-top:96px}
+/* headings a fraction smaller, everywhere */
+.v5 .v3-hero h1{font-size:clamp(2.4rem,5.4vw,4.6rem)!important}
+.v5 .v3-head h2{font-size:clamp(2rem,3.6vw,2.9rem)!important}
+/* hero diagram: smaller, sleeker, more air above */
+@media(min-width:901px){
+.v5 .v3-hero .v3-arch{max-width:980px;margin-top:120px!important;--node-h:88px;--node-gap:10px;--head-h:28px;grid-template-columns:1fr 44px 1.1fr 44px 1fr}
+.v5 .v3-arch .v3-node{padding:0 16px!important;gap:4px!important;border-radius:12px}
+.v5 .v3-arch .v3-node b{font-size:.88rem!important}
+.v5 .v3-arch .v3-node > span:not(.v3-node-row):not(.v5-pl-row),.v5 .v5-pl-sub{font-size:.76rem!important}
+.v5 .v3-arch .v3-node-chip img,.v5 .v3-arch .v3-node-more{width:22px!important;height:22px!important;border-radius:6px!important}
+.v5 .v3-arch .v3-node .v3-node-row{gap:6px!important}
+.v5 .v5-pl-stack i{width:22px!important;height:22px!important;margin-left:-6px!important;border-width:1.5px!important}
+.v5 .v3-arch-core{padding:16px!important;border-radius:16px}
+.v5 .v3-arch-core .v3-core-head{margin-bottom:10px!important;font-size:.92rem}
+.v5 .v3-arch-core .v3-core-head img{height:20px!important}
+.v5 .v3-arch-core .v3-core-grid{gap:8px!important}
+.v5 .v3-arch-core .v3-core-grid div{padding:0 12px!important;border-radius:9px}
+.v5 .v3-arch-core .v3-core-grid b{font-size:.84rem!important}
+.v5 .v3-arch-core .v3-core-grid span{font-size:.74rem!important}
+.v5 .v3-arch-h{font-size:.64rem!important}
+}

@@ -88,3 +88,6 @@ body.v5-page .page-hero .eyebrow,body.v5-page .hero .hero-eyebrow,body.v5-page .
 body.v5-page section .btn .arrow{font-size:1rem!important;line-height:1!important}
 body.v5-page section .btn--blue{background:#fff!important;color:#07070f!important;opacity:1!important}
 body.v5-page .feature-row:not(.tiles) .fcard{min-height:0!important;padding:24px 22px!important;display:flex!important;align-items:flex-start!important;justify-content:flex-start!important}
+/* headings a fraction smaller (matches homepage) */
+body.v5-page h1{font-size:clamp(2.4rem,5.4vw,4.6rem)!important}
+body.v5-page h2,body.v5-page h2.title{font-size:clamp(2rem,3.6vw,2.9rem)!important}
