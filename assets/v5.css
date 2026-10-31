@@ -423,3 +423,48 @@ html[data-mood="neon"] .v3-hero::after,html[data-mood="neon"] .v3-grid-bg,html[d
 html[data-mood="neon"] .po-mood-track{box-shadow:inset 0 0 0 1px var(--neon),0 0 10px var(--neon)!important}
 html[data-mood="neon"] .po-mood[data-pos="2"] .po-mood-track i{background:var(--neon)!important;box-shadow:0 0 10px var(--neon),0 0 18px var(--neon)!important}
 html[data-mood="neon"] .v5-aud-card li::before{background:var(--neon)!important}
+
+/* ================= MOOD JOYSTICK (replaces the bottom-left switch) ================= */
+.po-mood-wrap,.po-mood{display:none!important}
+.po-joy{position:fixed;left:14px;top:50%;transform:translateY(-50%);z-index:9999;display:flex;align-items:center;gap:8px}
+.po-joy-stick{width:44px;height:52px;padding:4px;border:0;border-radius:14px;cursor:pointer;background:rgba(255,255,255,.03);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);opacity:.45;transition:opacity .25s,background .25s,box-shadow .25s}
+.po-joy:hover .po-joy-stick,.po-joy.open .po-joy-stick,.po-joy-stick:focus-visible{opacity:1;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.po-joy-stick svg{width:100%;height:100%;overflow:visible}
+.po-joy .j-base{fill:#2a2a3a}.po-joy .j-rod{fill:#9a9ab0}
+.po-joy .j-ball{fill:#98A3FF;transition:fill .3s}
+.po-joy .j-btn{fill:#FF2E97}.po-joy .j-btn2{fill:#00F0FF}
+.po-joy .j-stick{transform-origin:20px 38px;transition:transform .3s cubic-bezier(.5,-.6,.4,1.6)}
+.po-joy:hover .j-stick{transform:rotate(-8deg)}
+.po-joy.tilt-l .j-stick{animation:poTiltL .5s}.po-joy.tilt-r .j-stick{animation:poTiltR .5s}
+@keyframes poTiltL{40%{transform:rotate(-24deg)}}@keyframes poTiltR{40%{transform:rotate(24deg)}}
+.po-joy[data-m="neon"] .j-ball{fill:var(--neon)}
+.po-joy[data-m="neon"] .po-joy-stick{opacity:.8;box-shadow:inset 0 0 0 1px rgba(var(--neon-rgb),.6),0 0 14px rgba(var(--neon-rgb),.45)}
+.po-joy-menu{display:flex;flex-direction:column;gap:4px;padding:6px;border-radius:12px;background:rgba(12,12,20,.92);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),0 12px 30px -10px rgba(0,0,0,.8);opacity:0;pointer-events:none;transform:translateX(-6px);transition:opacity .2s,transform .2s}
+.po-joy:hover .po-joy-menu,.po-joy.open .po-joy-menu{opacity:1;pointer-events:auto;transform:none}
+.po-joy-menu button{all:unset;cursor:pointer;font:500 .68rem/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);padding:8px 12px;border-radius:8px;white-space:nowrap}
+.po-joy-menu button:hover{color:#fff;background:rgba(255,255,255,.06)}
+.po-joy-menu button.on{color:#07070f;background:#fff}
+.po-joy[data-m="neon"] .po-joy-menu button.on{background:var(--neon);box-shadow:0 0 12px rgba(var(--neon-rgb),.6)}
+.po-joy-dice{opacity:.7}
+@media(max-width:600px){.po-joy{left:8px}.po-joy-stick{width:36px;height:44px}}
+@media(prefers-reduced-motion:reduce){.po-joy .j-stick{transition:none;animation:none!important}}
+
+/* ================= LIGHT v2: milky beige, black text ================= */
+/* No screen overlay and no contrast boost (they washed out logos). Instead the dark base colour is
+   swapped for one that lands on milky beige (#F2EBDD) after invert + hue-rotate. */
+html[data-mood="light"]{filter:invert(1) hue-rotate(180deg)!important;background:#F2EBDD}
+html[data-mood="light"] body::after{display:none!important}
+html[data-mood="light"] body{--navy:#1a1305;--slate:#211a0b;background:#1a1305!important}
+html[data-mood="light"] body > section:not(.v3-sec-alt):not(.v5-compute),html[data-mood="light"] footer,html[data-mood="light"] .nav,html[data-mood="light"] .gate-wrap{background-color:#1a1305!important}
+html[data-mood="light"] img,html[data-mood="light"] video,html[data-mood="light"] picture,html[data-mood="light"] svg image,html[data-mood="light"] [style*="background-image"],html[data-mood="light"] .v5-icons span,html[data-mood="light"] .v5-pl-stack i,html[data-mood="light"] .po-joy{filter:hue-rotate(180deg) invert(1)!important}
+html[data-mood="light"] img[src*="playsout-logo"],html[data-mood="light"] img[src*="playsout-icon"],html[data-mood="light"] .v3-inv img,html[data-mood="light"] .brand-logo,html[data-mood="light"] footer img{filter:none!important}
+/* text goes solid (white pre-invert = black on screen); secondary text stays a touch softer */
+html[data-mood="light"] h1,html[data-mood="light"] h2,html[data-mood="light"] h3,html[data-mood="light"] h4,html[data-mood="light"] b,html[data-mood="light"] strong,html[data-mood="light"] .f-title,html[data-mood="light"] .v3-row-title{color:#fff!important}
+html[data-mood="light"] p,html[data-mood="light"] li,html[data-mood="light"] span:not(.hl):not(.hl *),html[data-mood="light"] small,html[data-mood="light"] .nav-links a,html[data-mood="light"] footer a,html[data-mood="light"] label{color:rgba(255,255,255,.86)!important}
+html[data-mood="light"] .v3-mono,html[data-mood="light"] .eyebrow,html[data-mood="light"] .hero-eyebrow,html[data-mood="light"] .v3-arch-h,html[data-mood="light"] .tag{color:rgba(255,255,255,.7)!important}
+/* keep buttons that are dark-text-on-white readable */
+html[data-mood="light"] .v3-btn-solid,html[data-mood="light"] .v3-btn-solid *,html[data-mood="light"] section .btn--blue,html[data-mood="light"] section .btn--blue *,html[data-mood="light"] .po-joy *,html[data-mood="light"] .v5-aud-card:hover .v3-tlink{color:#07070f!important}
+html[data-mood="light"] .po-joy-menu button:not(.on){color:rgba(255,255,255,.6)!important}
+html[data-mood="light"] .v3-sec-alt,html[data-mood="light"] .v5-compute{background:#271e0c!important}
+html[data-mood="light"] .v3-press-logos img{filter:none!important}
+html[data-mood="light"] .arrow,html[data-mood="light"] .arrow *,html[data-mood="light"] .nav-cta .btn span.arrow{color:#07070f!important}
