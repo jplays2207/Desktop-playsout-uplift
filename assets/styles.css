@@ -250,7 +250,11 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 .logo-chip{flex:none;display:inline-flex;align-items:center;justify-content:center;height:40px}
 .logo-chip img{height:40px;width:auto;max-width:190px;object-fit:contain;opacity:.82;transition:opacity .2s}
 .logo-chip:hover img{opacity:1}
-.logo-chip.wide img{max-width:250px}
+.logo-label{margin-top:44px}
+.logo-marquee.investors{margin-top:22px}
+.investors .logo-chip,.investors .logo-chip img{height:30px}
+.investors .logo-chip img{max-width:170px;filter:grayscale(1) brightness(1.5);opacity:.7}
+.investors .logo-chip:hover img{filter:none;opacity:1}
 .logo-text{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1;color:#fff;opacity:.8;white-space:nowrap}
 /* Audience duo cards (For Creators / For Super Apps) */
 .duo{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
