@@ -264,3 +264,32 @@ body.v5{--hl:#98A3FF;--live:#3ddc84;--card:rgba(255,255,255,.025);--hair-2:rgba(
 .v5 .v5-pl-stack i:nth-child(5){background:linear-gradient(135deg,#5ee7ff,#1b8fb3)}
 .v5 .v5-pl-num{font-family:'Red Hat Display',sans-serif;font-weight:700;font-size:1.6rem;letter-spacing:-.02em;color:#fff}
 .v5 .v5-pl-sub{font-size:.85rem;color:rgba(255,255,255,.55)}
+/* one section rhythm, every page */
+:root{--sec-y:72px}
+@media(max-width:900px){:root{--sec-y:56px}}
+@media(max-width:600px){:root{--sec-y:44px}}
+.v5 .v3-sec,.v5 .v3-sec.v3-sec-tight,.v5 .v3-sec.v3-sec-alt,.v5 .v3-sec.v5-compute,
+body.v5-page .section{padding-top:var(--sec-y)!important;padding-bottom:var(--sec-y)!important}
+.v5 .v3-hero{padding-bottom:var(--sec-y)!important}
+body.v5-page .page-hero{padding-bottom:var(--sec-y)!important}
+body.v5-page .section:first-of-type{padding-top:var(--sec-y)!important}
+.v5 .v3-hero .v3-arch{margin-top:var(--sec-y)!important}
+/* super-apps card: generic app-icon field */
+.v5-icons{position:absolute;inset:-14px -30px;display:grid;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(5,1fr);gap:10px;padding:0;align-items:center;justify-items:center;-webkit-mask:radial-gradient(70% 75% at 50% 50%,#000 45%,transparent 100%);mask:radial-gradient(70% 75% at 50% 50%,#000 45%,transparent 100%)}
+.v5-icons span{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;opacity:.8;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);animation:v5bob 4s ease-in-out infinite}
+.v5-icons span svg{width:58%;height:58%}
+.v5-icons .v5-po{width:52px;height:52px;border-radius:14px;opacity:1;background:#3E46E8;box-shadow:0 0 0 6px rgba(73,92,245,.18),0 0 40px rgba(110,120,255,.8);animation:none;z-index:1;padding:6px}
+.v5-icons .v5-po img{width:100%;height:100%;object-fit:contain}
+@keyframes v5bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){.v5-icons span{animation:none}}
+/* audience card CTAs as buttons */
+.v5-aud-card .v3-tlink{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-size:.92rem;font-weight:600;color:#fff;background:rgba(255,255,255,.04);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);text-decoration:none;transition:background .2s,color .2s,box-shadow .2s}
+.v5-aud-card .v3-tlink:hover,.v5-aud-card:hover .v3-tlink{background:#fff;color:#07070f;box-shadow:inset 0 0 0 1px #fff}
+/* advertisers card: rotating creatives, 1.5s each */
+.v5-adrot{position:relative;width:132px;height:176px;border-radius:14px;overflow:hidden;box-shadow:0 18px 36px -12px rgba(0,0,0,.85),inset 0 0 0 1px rgba(255,255,255,.12);background:#111}
+.v5-adrot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:translateX(100%);animation:v5adrot 9s cubic-bezier(.7,0,.3,1) infinite}
+@keyframes v5adrot{0%{opacity:1;transform:translateX(100%)}4%{transform:translateX(0)}16.67%{opacity:1;transform:translateX(0)}20.67%{opacity:1;transform:translateX(-100%)}21%,100%{opacity:0;transform:translateX(100%)}}
+.v5-adrot .v5-ad-pill{z-index:2}
+@media(prefers-reduced-motion:reduce){.v5-adrot img{animation:none}.v5-adrot img:first-child{opacity:1;transform:none}}
+.v5-art-ads{place-items:center!important}.v5-adrot{width:120px;height:160px;margin:0!important}
+.v5 .v3-inv img[src*="okx"]{height:32px}
