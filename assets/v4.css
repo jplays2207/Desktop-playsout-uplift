@@ -156,3 +156,8 @@ body.v4{background:var(--navy);--hair:rgba(255,255,255,.09);--hair-2:rgba(255,25
   .v4-loop,.v4-ready ul,.v4-case-stats{grid-template-columns:1fr}
   .v4-engine li{grid-template-columns:1fr;gap:4px}
 }
+
+/* press rows: outlet logos instead of text */
+.v4 .v4-src{display:flex;align-items:center;height:28px}
+.v4 .v4-src img{height:22px;width:auto;max-width:150px;object-fit:contain;object-position:left center;opacity:.9}
+.v4 .v4-wm{font-family:var(--font);font-weight:800;font-size:1.05rem;letter-spacing:-.02em;text-transform:none;color:#fff;opacity:.9}
