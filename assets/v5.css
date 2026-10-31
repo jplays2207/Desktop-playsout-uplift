@@ -293,3 +293,30 @@ body.v5-page .section:first-of-type{padding-top:var(--sec-y)!important}
 @media(prefers-reduced-motion:reduce){.v5-adrot img{animation:none}.v5-adrot img:first-child{opacity:1;transform:none}}
 .v5-art-ads{place-items:center!important}.v5-adrot{width:120px;height:160px;margin:0!important}
 .v5 .v3-inv img[src*="okx"]{height:32px}
+/* arch diagram: strict grid — equal rows, shared top line, same heights across columns */
+@media(min-width:901px){
+.v5 .v3-arch{--node-h:112px;--node-gap:12px;--head-h:32px;--body-h:calc(var(--node-h)*3 + var(--node-gap)*2);align-items:start!important}
+.v5 .v3-arch-col{gap:var(--node-gap)!important}
+.v5 .v3-arch-h{height:18px;line-height:18px;margin:0 0 calc(var(--head-h) - 18px - var(--node-gap))!important}
+.v5 .v3-arch .v3-node{height:var(--node-h);box-sizing:border-box;padding:0 20px!important;justify-content:center;gap:6px!important;border-radius:14px}
+.v5 .v3-arch .v3-node b{font-family:'Red Hat Display',sans-serif;font-size:1rem;font-weight:600;line-height:1.2;color:#fff}
+.v5 .v3-arch .v3-node > span:not(.v3-node-row):not(.v5-pl-row){font-size:.85rem;line-height:1.3}
+.v5 .v3-arch .v3-node .v3-node-row{margin-top:2px!important}
+.v5 .v3-arch-link{height:var(--body-h)!important;margin-top:var(--head-h)}
+.v5 .v3-arch-core{height:var(--body-h);margin-top:var(--head-h);box-sizing:border-box;display:flex;flex-direction:column;padding:20px!important}
+.v5 .v3-arch-core .v3-core-head{margin-bottom:14px!important}
+.v5 .v3-arch-core .v3-core-grid{flex:1;grid-template-rows:1fr 1fr;gap:10px!important}
+.v5 .v3-arch-core .v3-core-grid div{justify-content:center;padding:0 16px!important}
+.v5 .v3-arch-core .v3-core-grid span{white-space:nowrap}
+.v5 .v5-pl-row{gap:0!important;margin-top:2px}
+.v5 .v5-pl-stack i{width:28px!important;height:28px!important;margin-left:-8px!important}
+.v5 .v5-pl-stack i:first-child{margin-left:0!important}
+.v5 .v5-pl-sub{font-size:.85rem!important;line-height:1.3}
+}
+/* experience tiles: breathing room + compact, aligned */
+.v5 .v5-tiles{margin-top:40px!important;gap:16px!important}
+.v5 .v5-tiles .fcard{min-height:0!important;padding:24px 18px!important;gap:8px!important;justify-content:flex-start;border-radius:16px}
+.v5 .v5-tiles .tile-ico{width:44px!important;height:44px!important;border-radius:12px!important}
+.v5 .v5-tiles .tile-ico svg{width:20px!important;height:20px!important}
+.v5 .v5-tiles .f-title{font-size:.98rem!important;line-height:1.25;margin-top:10px!important;min-height:2.5em;display:flex;align-items:center;justify-content:center}
+.v5 .v5-tiles .f-desc{font-size:.84rem!important;line-height:1.45}
