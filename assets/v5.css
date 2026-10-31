@@ -234,3 +234,9 @@ body.v5{--hl:#98A3FF;--live:#3ddc84;--card:rgba(255,255,255,.025);--hair-2:rgba(
 .v5 .v3-inv img[src*="venturesouq"]{height:16px}
 .v5 .v3-inv img[src*="tencent"]{height:46px}
 .v5 .v3-inv img[src*="4399"]{height:30px}
+/* nav: logo never squashes; links tighten before they collide */
+.v5 .brand{flex:none;margin-right:24px}
+.v5 .brand-logo{flex:none;width:auto;max-width:none;object-fit:contain}
+.v5 .nav-cta{flex:none}
+@media(max-width:1280px){.v5 .nav-links{gap:24px}.v5 .nav-links a{font-size:.85rem}}
+@media(max-width:1080px){.v5 .nav-links{gap:16px}.v5 .nav-cta .btn:last-child{display:none}}

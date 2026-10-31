@@ -1,0 +1,41 @@
+/* =====================================================================
+   PlaysOut shared v5 theme — brings inner pages in line with the homepage.
+   Load after styles.css + v3.css + v5.css, with <body class="v3 v5 v5-page">.
+   ===================================================================== */
+body.v5-page{
+  --navy:#07070f; --navy-2:#0b0b16; --slate:#15151f; --slate-2:#101019;
+  --display:"Red Hat Display",system-ui,sans-serif;
+  background:#07070f;
+}
+/* headings: same face and weight as the homepage */
+.v5-page h1,.v5-page h2,.v5-page .title,.v5-page .hero h1,.v5-page .hero-eyebrow{font-family:var(--font);font-weight:600;letter-spacing:-.035em}
+/* hero: swap the bright blue wash for the homepage's grid + soft glow */
+.v5-page .hero{background:radial-gradient(70% 55% at 50% 0%,rgba(73,92,245,.22),transparent 70%),#07070f!important}
+/* cards and panels: hairline outlines like the homepage */
+.v5-page .fcard,.v5-page .duo-card,.v5-page .ncard,.v5-page .card{background:rgba(255,255,255,.025);border:1px solid var(--hair);box-shadow:none}
+/* sections separated by hairlines instead of colour bands */
+.v5-page section+section{border-top:1px solid var(--hair)}
+/* page hero: homepage grid + soft glow instead of the bright blue wash */
+.v5-page .page-hero{background:
+  radial-gradient(60% 50% at 50% 0%,rgba(73,92,245,.28),transparent 70%),
+  linear-gradient(var(--hair) 1px,transparent 1px) 0 0/64px 64px,
+  linear-gradient(90deg,var(--hair) 1px,transparent 1px) 0 0/64px 64px,#07070f!important}
+.v5-page .page-hero::before,.v5-page .page-hero::after{display:none!important}
+.v5-page .page-hero h1{font-family:var(--font);font-weight:600;letter-spacing:-.04em}
+.v5-page .page-hero p{color:var(--t2)}
+/* in-page buttons: homepage style (white solid / outlined), nav buttons untouched */
+.v5-page section .btn{border-radius:10px;padding:8px 8px 8px 20px;gap:12px;font-weight:600;letter-spacing:0;text-transform:none;box-shadow:none}
+.v5-page section .btn .arrow{width:30px;height:30px;border-radius:7px}
+.v5-page section .btn--blue{background:#fff;color:#07070f}
+.v5-page section .btn--blue .arrow{background:#07070f;color:#fff}
+.v5-page section .btn--dark{background:rgba(255,255,255,.02);color:var(--t1);box-shadow:inset 0 0 0 1px var(--hair-2)}
+.v5-page section .btn:hover{transform:translateY(-1px)}
+/* accent panels (e.g. the cup card): toned down to the homepage's indigo glow */
+.v5-page .cup-hero{background:radial-gradient(80% 100% at 80% 0%,rgba(73,92,245,.35),transparent 70%),rgba(255,255,255,.025)!important;border:1px solid var(--hair)!important}
+/* hero grid v2: finer, fainter, fading out from the top centre (matches homepage) */
+.v5-page .page-hero{background:radial-gradient(60% 50% at 50% 0%,rgba(73,92,245,.22),transparent 70%),#07070f!important}
+body.v5-page .page-hero::after{content:"";display:block!important;position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:72px 72px;
+  -webkit-mask:radial-gradient(60% 70% at 50% 0%,#000 10%,transparent 75%);mask:radial-gradient(60% 70% at 50% 0%,#000 10%,transparent 75%)}
+.v5-page .page-hero>*{position:relative;z-index:1}
