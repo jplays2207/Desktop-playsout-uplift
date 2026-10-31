@@ -455,7 +455,7 @@ html[data-mood="neon"] .v5-aud-card li::before{background:var(--neon)!important}
 html[data-mood="light"]{filter:invert(1) hue-rotate(180deg)!important;background:#F2EBDD}
 html[data-mood="light"] body::after{display:none!important}
 html[data-mood="light"] body{--navy:#1a1305;--slate:#211a0b;background:#1a1305!important}
-html[data-mood="light"] body > section:not(.v3-sec-alt):not(.v5-compute),html[data-mood="light"] footer,html[data-mood="light"] .nav,html[data-mood="light"] .gate-wrap{background-color:#1a1305!important}
+html[data-mood="light"] body > section:not(.v3-sec-alt):not(.v5-compute),html[data-mood="light"] footer,html[data-mood="light"] .gate-wrap{background-color:#1a1305!important}
 html[data-mood="light"] img,html[data-mood="light"] video,html[data-mood="light"] picture,html[data-mood="light"] svg image,html[data-mood="light"] [style*="background-image"],html[data-mood="light"] .v5-icons span,html[data-mood="light"] .v5-pl-stack i,html[data-mood="light"] .po-joy{filter:hue-rotate(180deg) invert(1)!important}
 html[data-mood="light"] img[src*="playsout-logo"],html[data-mood="light"] img[src*="playsout-icon"],html[data-mood="light"] .v3-inv img,html[data-mood="light"] .brand-logo,html[data-mood="light"] footer img{filter:none!important}
 /* text goes solid (white pre-invert = black on screen); secondary text stays a touch softer */
@@ -468,3 +468,33 @@ html[data-mood="light"] .po-joy-menu button:not(.on){color:rgba(255,255,255,.6)!
 html[data-mood="light"] .v3-sec-alt,html[data-mood="light"] .v5-compute{background:#271e0c!important}
 html[data-mood="light"] .v3-press-logos img{filter:none!important}
 html[data-mood="light"] .arrow,html[data-mood="light"] .arrow *,html[data-mood="light"] .nav-cta .btn span.arrow{color:#07070f!important}
+html[data-mood="light"] .nav.scrolled{background:rgba(26,19,5,.85)!important}
+
+/* ================= LIGHT v3: plain invert (exactly reversible) so logos/photos stay crisp and true =================
+   hue-rotate isn't truly reversible and was washing out every image. With invert only, images flip back exactly.
+   Accent colours are written pre-inverted; illustrations are flipped back as dark "screens". */
+html[data-mood="light"]{filter:invert(1)!important;background:#F2EBDD}
+html[data-mood="light"] body{background:#0d1422!important;--navy:#0d1422}
+html[data-mood="light"] body > section:not(.v3-sec-alt):not(.v5-compute),html[data-mood="light"] footer,html[data-mood="light"] .gate-wrap{background-color:#0d1422!important}
+html[data-mood="light"] .v3-sec-alt,html[data-mood="light"] .v5-compute{background:#161f31!important}
+html[data-mood="light"] .nav.scrolled{background:rgba(13,20,34,.85)!important}
+/* flip media back (exact) */
+html[data-mood="light"] img,html[data-mood="light"] video,html[data-mood="light"] svg image,html[data-mood="light"] [style*="background-image"],html[data-mood="light"] .v5-icons span,html[data-mood="light"] .v5-pl-stack i,html[data-mood="light"] .po-joy,
+html[data-mood="light"] .v5-iso,html[data-mood="light"] .v5-globe-wrap,html[data-mood="light"] .v5-slash-wrap,html[data-mood="light"] .v5-aud-art,html[data-mood="light"] .tile-ico{filter:invert(1)!important}
+/* but not twice inside an already-flipped block */
+html[data-mood="light"] :is(.v5-iso,.v5-globe-wrap,.v5-slash-wrap,.v5-aud-art,.tile-ico,.po-joy) :is(img,svg image,span,i,[style*="background-image"]){filter:none!important}
+/* white brand marks and mono logos: let them invert to dark */
+html[data-mood="light"] img[src*="playsout-logo"],html[data-mood="light"] img[src*="playsout-icon"]:not(:is(.v5-aud-art,.v5-iso,.v5-globe-wrap) *),html[data-mood="light"] .v3-inv img[src*="whampoa"],html[data-mood="light"] .v3-inv img[src*="okx"],html[data-mood="light"] .v3-inv img[src*="longling"],html[data-mood="light"] .v3-inv img[src*="venturesouq"],html[data-mood="light"] .brand-logo,html[data-mood="light"] footer img{filter:none!important}
+/* accents, pre-inverted: indigo on beige */
+html[data-mood="light"] .hl{background:linear-gradient(90deg,#c4c040,#a4a30f 45%,#d5d061)!important;-webkit-background-clip:text!important;background-clip:text!important}
+html[data-mood="light"] .nav-links a.active,html[data-mood="light"] .tag,html[data-mood="light"] .read,html[data-mood="light"] .v4-num,html[data-mood="light"] .hint a{color:#c4c040!important}
+html[data-mood="light"] .v3-arch-core{background:rgba(0,0,0,.25)!important;box-shadow:inset 0 0 0 1px rgba(196,192,64,.6)!important}
+html[data-mood="light"] .v5-aud-card li::before{background:#c4c040!important}
+html[data-mood="light"] .v3-inv img,html[data-mood="light"] .v3-press-logos img{filter:invert(1)!important}
+/* light: partner + press logos as crisp solid dark marks (white pre-invert = black on screen) */
+html[data-mood="light"] .v3-inv img,html[data-mood="light"] .v3-inv img[src],html[data-mood="light"] .v3-press-logos img{filter:brightness(0) invert(1)!important;opacity:.85!important}
+/* light: illustration labels readable (these sit inside flipped blocks, so authored colours show as-is) */
+html[data-mood="light"] .v5-iso .v5-iso-name{fill:#07070f!important}
+html[data-mood="light"] .v5-iso .v5-iso-sub{fill:#3a3a4a!important}
+html[data-mood="light"] .v5-globe-wrap{background:#0b0b16!important;border-radius:20px}
+html[data-mood="light"] .v3-inv img[src*="pacific-century"],html[data-mood="light"] .v3-press-logos img[src*="hackernoon"]{filter:invert(1)!important;opacity:1!important}
