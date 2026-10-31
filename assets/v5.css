@@ -320,3 +320,4 @@ body.v5-page .section:first-of-type{padding-top:var(--sec-y)!important}
 .v5 .v5-tiles .tile-ico svg{width:20px!important;height:20px!important}
 .v5 .v5-tiles .f-title{font-size:.98rem!important;line-height:1.25;margin-top:10px!important;min-height:2.5em;display:flex;align-items:center;justify-content:center}
 .v5 .v5-tiles .f-desc{font-size:.84rem!important;line-height:1.45}
+html{scroll-padding-top:96px}
