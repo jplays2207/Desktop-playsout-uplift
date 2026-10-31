@@ -250,6 +250,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 .logo-chip{flex:none;display:inline-flex;align-items:center;justify-content:center;height:40px}
 .logo-chip img{height:40px;width:auto;max-width:190px;object-fit:contain;opacity:.82;transition:opacity .2s}
 .logo-chip:hover img{opacity:1}
+.logo-chip.wide img{max-width:250px}
 .logo-text{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1;color:#fff;opacity:.8;white-space:nowrap}
 /* Audience duo cards (For Creators / For Super Apps) */
 .duo{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
