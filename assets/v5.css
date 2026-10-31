@@ -240,3 +240,11 @@ body.v5{--hl:#98A3FF;--live:#3ddc84;--card:rgba(255,255,255,.025);--hair-2:rgba(
 .v5 .nav-cta{flex:none}
 @media(max-width:1280px){.v5 .nav-links{gap:24px}.v5 .nav-links a{font-size:.85rem}}
 @media(max-width:1080px){.v5 .nav-links{gap:16px}.v5 .nav-cta .btn:last-child{display:none}}
+/* hero app logos: continuous carousel moving left to right */
+.v5-marquee{display:block!important;overflow:hidden;max-width:980px;margin-left:auto;margin-right:auto;
+  -webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.v5-marquee-track{display:flex;gap:16px;width:max-content;animation:v5marq 32s linear infinite}
+.v5-marquee-track .logo-chip{flex:none}
+.v5-marquee:hover .v5-marquee-track{animation-play-state:paused}
+@keyframes v5marq{from{transform:translateX(calc(-50% - 8px))}to{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.v5-marquee-track{animation:none}}
