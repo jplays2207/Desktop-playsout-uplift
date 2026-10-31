@@ -243,7 +243,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 .logo-marquee{overflow:hidden;margin-top:36px;
   -webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
   mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
-.logo-track{display:flex;align-items:center;gap:72px;width:max-content;animation:logoscroll 50s linear infinite}
+.logo-track{display:flex;align-items:center;gap:56px;width:max-content;animation:logoscroll 50s linear infinite}
 .logo-marquee:hover .logo-track{animation-play-state:paused}
 .logo-track.rev{animation-direction:reverse}
 @keyframes logoscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
