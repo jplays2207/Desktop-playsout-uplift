@@ -1,0 +1,91 @@
+/* =====================================================================
+   PlaysOut homepage v4 (preview) — v3 layout restyled to the investor deck
+   navy + corner glow, periwinkle second clause, [01] labels, bordered cards
+   ===================================================================== */
+body.v4{background:var(--navy);--hair:rgba(255,255,255,.09);--hair-2:rgba(255,255,255,.16);
+  --t1:#fff;--t2:#b4b6d6;--t3:#7d80a8;--hl:#8e98ff;--live:#3ee0a0;--card:rgba(255,255,255,.035)}
+.v4 h1,.v4 h2,.v4 h3{font-family:var(--font);font-weight:800;letter-spacing:-.035em}
+.v4 .hl{color:var(--hl)}
+.v4 .v3-mono{color:var(--t3);letter-spacing:.12em}
+
+/* every section gets the deck's blue corner glow */
+.v4 .v3-sec,.v4 .v3-logos{position:relative;overflow:hidden;background:none;border-top:none}
+.v4 .v3-sec::before{content:"";position:absolute;top:-220px;right:-160px;width:720px;height:520px;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(61,62,253,.30),transparent);filter:blur(10px)}
+.v4 .v3-sec > .wrap{position:relative}
+.v4 .v3-sec-alt::before{right:auto;left:-200px}
+
+/* hero, deck cover style */
+.v4 .v3-hero{background:radial-gradient(55% 55% at 50% 0%,rgba(61,62,253,.42),transparent 72%),
+  radial-gradient(40% 40% at 90% 10%,rgba(40,34,222,.35),transparent 70%)}
+.v4 .v3-grid-bg{opacity:.5}
+.v4 .v3-hero h1{font-size:clamp(2.8rem,6.4vw,5.6rem);max-width:none;line-height:1.02}
+.v4 .v3-sub{color:var(--t2)}
+.v4 .v3-announce{background:rgba(255,255,255,.05)}
+.v4 .v3-dot{background:var(--live);box-shadow:0 0 10px var(--live)}
+.v4-hero-apps{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:40px}
+.v4-hero-apps .logo-chip,.v4-hero-apps .logo-chip img{height:40px}
+.v4-hero-apps .logo-chip img{border-radius:10px;max-width:120px}
+.v4 .v3-btn{border-radius:999px;padding:0 24px}
+.v4 .v3-btn-line{background:rgba(255,255,255,.05)}
+
+/* architecture -> deck cards */
+.v4 .v3-node{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);border-radius:14px}
+.v4 .v3-arch-core{background:linear-gradient(180deg,rgba(73,92,245,.26),rgba(73,92,245,.08));box-shadow:inset 0 0 0 1px rgba(142,152,255,.45),0 30px 80px -30px rgba(61,62,253,.7)}
+.v4 .v3-core-grid div{background:rgba(17,17,41,.7)}
+.v4 .v3-core-grid b{color:var(--hl)}
+
+/* app strip under hero: now redundant with hero icons, keep as quiet label row */
+.v4 .v3-logos{padding:40px 0 56px;border-top:1px solid var(--hair)}
+
+/* metrics as deck stat cards */
+.v4 .v3-metrics{border:none;gap:14px}
+.v4 .v3-metrics div{background:var(--card);border-radius:16px;box-shadow:inset 0 0 0 1px var(--hair)}
+.v4 .v3-metrics div + div{border-left:none}
+.v4 .v3-metrics b{font-weight:800;color:var(--live)}
+.v4 .v3-metrics .ph b{color:#3c3f66}
+
+/* platform columns as cards */
+.v4 .v3-cols{border-top:none;gap:16px}
+.v4 .v3-col,.v4 .v3-col + .v3-col{padding:30px 28px;border-left:none;border-radius:18px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair)}
+.v4 .v3-col .v3-mono{color:var(--hl)}
+
+/* catalogue window */
+.v4 .v3-window{background:rgba(17,17,41,.9);border-radius:18px}
+
+/* audiences -> three deck cards */
+.v4 .v3-table{border-top:none;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.v4 .v3-trow{grid-template-columns:1fr;gap:18px;padding:30px 28px;border-bottom:none;border-radius:18px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair)}
+.v4 .v3-tname h3{font-size:1.4rem}
+.v4 .v3-tname .v3-mono{color:var(--hl)}
+.v4 .v3-trow li::before{background:var(--hl)}
+.v4 .v3-tlink{padding-top:6px;color:var(--hl)}
+
+/* press list in a card */
+.v4 .v3-rows{border-top:none;border-radius:18px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:0 24px}
+.v4 .v3-row:last-child{border-bottom:none}
+.v4 .v3-press-logos .logo-chip img{opacity:.65}
+
+/* investors */
+.v4 .v3-inv .logo-chip img{opacity:.75}
+
+/* closing, deck back-cover */
+.v4 .v3-final{background:radial-gradient(60% 90% at 50% 0%,rgba(61,62,253,.45),transparent 75%),rgba(255,255,255,.03);border-radius:24px}
+.v4 .v3-final h2{font-size:clamp(2.4rem,5.4vw,4.4rem)}
+.v4 .footer{background:var(--navy)}
+
+@media(max-width:1024px){
+  .v4 .v3-table{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .v4 .v3-col,.v4 .v3-col + .v3-col{padding:26px 22px;border-top:none}
+  .v4 .v3-metrics{grid-template-columns:repeat(2,1fr)}
+  .v4 .v3-metrics div:nth-child(n+3){border-top:none}
+  .v4-hero-apps .logo-chip,.v4-hero-apps .logo-chip img{height:34px}
+}
+
+/* glow sits fully inside each section so it never shows a hard cut line */
+.v4 .v3-sec::before{top:0;right:-120px;width:760px;height:560px;background:radial-gradient(closest-side,rgba(61,62,253,.26),transparent)}
+.v4 .v3-sec-alt::before{right:auto;left:-160px}
+/* investors in colour: greyscale turns 4399 and similar logos into blank blocks */
+.v4 .v3-inv .logo-chip img{filter:none;opacity:.85}
