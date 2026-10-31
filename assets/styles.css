@@ -238,6 +238,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;color:
 /* Real article preview image (og:image), with graceful fallback to branded cover */
 .ncard-img{position:relative;overflow:hidden}
 .ncard-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;display:block;background:var(--slate-2)}
+.ncard-logo{object-fit:contain;padding:0 22%;background:#000}
 /* Featured-in logo marquee */
 .logo-marquee{overflow:hidden;margin-top:36px;
   -webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
