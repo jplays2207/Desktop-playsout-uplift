@@ -498,3 +498,8 @@ html[data-mood="light"] .v5-iso .v5-iso-name{fill:#07070f!important}
 html[data-mood="light"] .v5-iso .v5-iso-sub{fill:#3a3a4a!important}
 html[data-mood="light"] .v5-globe-wrap{background:#0b0b16!important;border-radius:20px}
 html[data-mood="light"] .v3-inv img[src*="pacific-century"],html[data-mood="light"] .v3-press-logos img[src*="hackernoon"]{filter:invert(1)!important;opacity:1!important}
+/* advertisers: two rotating ad screens side by side, offset by half a beat */
+.v5-adpair{display:flex;gap:14px;align-items:center;justify-content:center}
+.v5-adpair .v5-adrot{width:112px!important;height:150px!important}
+.v5-adpair .v5-adrot:nth-child(2){transform:translateY(10px)}
+.v5-adpair .v5-ad-pill{font-size:.55rem;padding:4px 7px;top:7px;left:7px}
