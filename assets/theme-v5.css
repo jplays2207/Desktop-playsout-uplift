@@ -98,3 +98,6 @@ body.v5-page .gate-wrap::after{content:"";position:absolute;inset:0;pointer-even
   -webkit-mask:radial-gradient(70% 75% at 50% 0%,#000 15%,transparent 80%);mask:radial-gradient(70% 75% at 50% 0%,#000 15%,transparent 80%)}
 body.v5-page .gate-wrap>*{position:relative;z-index:1}
 body.v5-page .gate-wrap>.gate-logo,body.v5-page .gate-wrap>.gate-back{position:absolute}
+
+/* Mobile pass (phones only) */
+@media(max-width:600px){body.v5-page .page-hero p:not(.eyebrow),body.v5-page .hero .sub,body.v5-page .lead{font-size:1rem!important;line-height:1.5!important}body.v5-page .page-hero h1{font-size:2.1rem!important;line-height:1.08!important}body.v5-page .section h2,body.v5-page .title{font-size:1.65rem!important;line-height:1.12!important}}

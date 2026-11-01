@@ -503,3 +503,91 @@ html[data-mood="light"] .v3-inv img[src*="pacific-century"],html[data-mood="ligh
 .v5-adpair .v5-adrot{width:112px!important;height:150px!important}
 .v5-adpair .v5-adrot:nth-child(2){transform:translateY(10px)}
 .v5-adpair .v5-ad-pill{font-size:.55rem;padding:4px 7px;top:7px;left:7px}
+
+/* ===== Mobile pass (phones only, <=600px) ===== */
+@media(max-width:900px){.v5-how{grid-template-columns:1fr!important;gap:28px!important}.v5-how-art{align-self:auto!important;margin:0 auto!important}}
+@media(max-width:600px){
+  .wrap{padding-left:16px!important;padding-right:16px!important}
+  /* type scale */
+  .v5 h1,.v5-page h1{font-size:2.1rem!important;line-height:1.08!important}
+  .v5 h2,.v5-page h2,.v5-page .title{font-size:1.65rem!important;line-height:1.12!important}
+  .v3-lede,.v3-sub{font-size:1rem!important;line-height:1.5!important}
+  .v3-mono,.eyebrow,.hero-eyebrow{font-size:.66rem!important}
+  .v3-head{margin-bottom:28px!important}
+  .v3-lede{margin-top:12px!important}
+  .v3-btn,.v5 .btn,.v5-page .btn{height:42px!important;font-size:.9rem!important}
+  /* hero */
+  .v3-hero{padding-top:104px!important;padding-bottom:32px!important}
+  .v3-sub{margin-top:16px!important}
+  .v3-cta{margin-top:24px!important}
+  .v4-hero-apps{margin-top:36px!important}
+  .v3-arch{margin-top:36px!important;gap:10px!important}
+  .v3-node{padding:10px 14px!important;border-radius:12px!important}
+  .v3-node b,.v3-node strong,.v3-node h4{font-size:.95rem!important}
+  .v3-node span,.v3-node p{font-size:.8rem!important}
+  .v3-arch-core{padding:16px!important}
+  /* stats */
+  .v5 .v3-metrics div{padding:18px 14px!important;gap:6px!important}
+  .v5 .v3-metrics b{font-size:1.9rem!important}
+  .v5 .v3-metrics span{font-size:.82rem!important}
+  /* feature tiles: icon left, text right */
+  .v5 .v5-tiles{gap:10px!important;margin-top:24px!important}
+  .v5 .v5-tiles .fcard{display:grid!important;grid-template-columns:40px 1fr;grid-template-rows:auto auto;column-gap:14px;row-gap:2px;align-items:center;text-align:left!important;padding:14px 16px!important;min-height:0!important}
+  .v5 .v5-tiles .tile-ico{grid-row:1 / span 2;width:40px!important;height:40px!important;margin:0!important}
+  .v5 .v5-tiles .f-title{font-size:.98rem!important;margin:0!important;align-self:end;text-align:left!important;display:block!important;min-height:0!important}
+  .v5 .v5-tiles .f-desc{font-size:.84rem!important;margin:0!important;align-self:start;text-align:left!important;max-width:none!important}
+  .v5 .v3-inv{gap:12px 22px!important}
+  .v5 .v3-inv .logo-chip{height:40px!important}
+  .v5 .v3-inv .logo-chip img{max-height:24px!important}
+  .v5 .v3-inv img[src*="kbw"]{max-height:30px!important}
+  .v5 .v3-inv img[src*="tencent"]{max-height:38px!important}
+  .v5 .v3-inv img[src*="venturesouq"]{max-height:14px!important}
+  /* how it works */
+  .v5-how .v4-layer{grid-template-columns:28px 1fr!important;gap:12px!important;padding:14px 16px!important}
+  .v5-how .v4-num{font-size:1.15rem!important}
+  .v5-how .v4-layer h3{font-size:1rem!important}
+  .v5-how .v4-layer p{font-size:.86rem!important;line-height:1.45!important}
+  .v5-how .v4-stack{gap:10px!important}
+  .v5-how-art .v5-iso{max-width:300px!important}
+  .v5-how-left .v3-head{margin-bottom:24px!important}
+  /* audience cards */
+  .v5-aud{gap:14px!important}
+  .v5-aud-card{padding:16px!important}
+  .v5-aud-card h3{font-size:1.15rem!important}
+  .v5-aud-card li{font-size:.88rem!important}
+  /* press */
+  .v3-head-row{align-items:flex-start!important;gap:16px!important}
+  .v3-press-logos{gap:16px 28px!important;padding-bottom:20px!important}
+  .v3-press-logos .logo-chip,.v3-press-logos img{height:22px!important}
+  .v3-row{padding:14px 0!important}
+  .v3-row-title{font-size:.98rem!important;line-height:1.35!important}
+  .v3-row-src{font-size:.72rem!important}
+  .v3-logo-row{gap:18px 22px!important;margin-top:20px!important}
+  /* closing CTA */
+  .v3-final{padding:44px 18px!important;border-radius:16px!important}
+  .v3-final h2{font-size:1.65rem!important}
+  .v3-form{margin-top:20px!important}
+  /* footer */
+  .footer{padding:44px 0 28px!important}
+  .footer-top{grid-template-columns:1fr 1fr!important;gap:24px 16px!important;padding-bottom:28px!important}
+  .footer-brand{grid-column:1 / -1}
+  .footer-icon{height:44px!important;width:auto!important}
+  .footer h5{font-size:.82rem!important;margin-bottom:10px!important}
+  .footer ul{gap:8px!important}
+  .footer li a{font-size:.74rem!important}
+  .footer-bottom{gap:10px 20px!important;padding-top:20px!important;font-size:.8rem!important}
+  .footer-bottom .spacer{display:none}
+  .footer-legal{gap:8px 16px!important}
+  .footer-legal a{font-size:.78rem!important}
+  /* inner pages */
+  .v5-page .page-hero{padding-top:104px!important;padding-bottom:32px!important}
+  .v5-page .feature-row{grid-template-columns:1fr!important;gap:10px!important}
+  .v5-page .fcard{padding:16px!important;min-height:0!important}
+  .v5-page .sec-head{margin-bottom:24px!important}
+  .v5-page .hero-cta{flex-direction:row!important;flex-wrap:wrap;justify-content:center;gap:10px!important}
+  .v5-page .hero-cta .btn{width:auto!important;flex:0 0 auto}
+  .v5-page .cta-final{padding:44px 18px!important;border-radius:16px!important}
+  /* theme picker: tuck into bottom-left corner so it never sits on content */
+  .po-joy{top:auto!important;bottom:14px!important;transform:none!important;left:10px!important}
+  .po-joy-stick{width:34px!important;height:40px!important}
+}
